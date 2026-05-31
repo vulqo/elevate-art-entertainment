@@ -7,8 +7,11 @@ function Footer() {
       <div className="container pb-40 pt-40 ontop">
         <div className="row justify-content-between">
           <div className="col-lg-2">
-            <div className="logo icon-img-100 md-mb80">
-              <img src="/assets/imgs/logo-light.png" alt="Elevate Art Entertainment" />
+            <div className="logo brand-logo-stacked md-mb80">
+              <img
+                src="/assets/imgs/brand/logo-stacked-light.svg"
+                alt="Elevate Art Entertainment"
+              />
             </div>
           </div>
           <div className="col-lg-4">

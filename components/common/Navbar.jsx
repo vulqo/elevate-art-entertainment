@@ -42,8 +42,11 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo icon-img-100" href="/">
-          <img src="/assets/imgs/logo-light.png" alt="Elevate Art Entertainment" />
+        <a className="logo brand-logo" href="/">
+          <img
+            src="/assets/imgs/brand/logo-horizontal-light.svg"
+            alt="Elevate Art Entertainment"
+          />
         </a>
 
         <button

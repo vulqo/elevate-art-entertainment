@@ -1,0 +1,20 @@
+/* Elevate Art Entertainment — brand-specific overrides */
+
+/* Logo sizing for SVG brand marks */
+.brand-logo img {
+  height: 44px;
+  width: auto;
+  max-width: none;
+  display: block;
+}
+
+.brand-logo-stacked img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* When the navbar shrinks on scroll, keep logo proportional */
+.navbar.nav-scroll .brand-logo img {
+  height: 38px;
+}
