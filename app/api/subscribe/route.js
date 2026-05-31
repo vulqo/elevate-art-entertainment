@@ -7,17 +7,10 @@ export const runtime = 'nodejs';
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, subject, message } = body || {};
-
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields: name, email, message' },
-        { status: 400 }
-      );
-    }
+    const { email, source } = body || {};
 
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRe.test(email)) {
+    if (!email || !emailRe.test(email)) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
     }
 
@@ -29,18 +22,19 @@ export async function POST(request) {
     const cookieStore = cookies();
     const supabase = createClient(cookieStore);
 
-    const { error } = await supabase.from('leads').insert({
-      name,
+    const { error } = await supabase.from('subscribers').insert({
       email,
-      subject: subject || null,
-      message,
+      source: source || 'footer',
       ip,
       user_agent: request.headers.get('user-agent') || null,
     });
 
     if (error) {
+      if (error.code === '23505' || /duplicate/i.test(error.message)) {
+        return NextResponse.json({ ok: true, alreadySubscribed: true });
+      }
       return NextResponse.json(
-        { error: 'Could not save lead', detail: error.message },
+        { error: 'Could not subscribe', detail: error.message },
         { status: 500 }
       );
     }

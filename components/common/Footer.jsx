@@ -1,4 +1,5 @@
 import React from 'react';
+import NewsletterForm from './NewsletterForm';
 
 function Footer() {
   return (
@@ -46,12 +47,7 @@ function Footer() {
           <div className="col-lg-3">
             <div className="column subscribe-minimal">
               <h6 className="sub-title mb-30">Newsletter</h6>
-              <div className="form-group mb-40">
-                <input type="text" name="subscrib" placeholder="Your Email" />
-                <button>
-                  <span className="ti-location-arrow"></span>
-                </button>
-              </div>
+              <NewsletterForm />
               <ul className="rest social-icon d-flex align-items-center">
                 <li className="hover-this cursor-pointer">
                   <a href="#0" className="hover-anim">
