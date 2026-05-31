@@ -42,8 +42,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bord blur">
       <div className="container o-hidden">
-        <a className="logo icon-img-100" href="#">
-          <img src="/assets/imgs/logo-light.png" alt="logo" />
+        <a className="logo icon-img-100" href="/">
+          <img src="/assets/imgs/logo-light.png" alt="Elevate Art Entertainment" />
         </a>
 
         <button
@@ -66,134 +66,20 @@ function Navbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav">
-            <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
-              className="nav-item dropdown"
-            >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Demos</span>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                <span className="rolling-text">Home</span>
               </a>
-              <div className="dropdown-menu mega-menu">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg">
-                      <a className="item-img text-center" href="/home-main">
-                        <span className="img">
-                          <img src="/assets/imgs/menu/1.png" alt="" />
-                        </span>
-                        <span className="mt-15">Main Home</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-modern-studio"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/2.png" alt="" />
-                        </span>
-                        <span className="mt-15">Modern Studio</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-creative-agency"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/3.png" alt="" />
-                        </span>
-                        <span className="mt-15">Creative Agency</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a
-                        className="item-img text-center"
-                        href="/home-digital-agency"
-                      >
-                        <span className="img">
-                          <img src="/assets/imgs/menu/4.png" alt="" />
-                        </span>
-                        <span className="mt-15">Digital Agency</span>
-                      </a>
-                    </div>
-                    <div className="col-lg">
-                      <a className="item-img text-center" href="/home-personal">
-                        <span className="img">
-                          <img src="/assets/imgs/menu/5.png" alt="" />
-                        </span>
-                        <span className="mt-15">Freelancer</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </li>
-            <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
-              className="nav-item dropdown"
-            >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Pages</span>
+            <li className="nav-item">
+              <a className="nav-link" href="/page-about">
+                <span className="rolling-text">About</span>
               </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="/page-about">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-services">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-services-details">
-                    Services Details
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-team">
-                    Our Team
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-team-details">
-                    Team Details
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-contact">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-FAQ">
-                    FAQS
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/page-404">
-                    Error 404
-                  </a>
-                </li>
-              </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/page-services">
+                <span className="rolling-text">Services</span>
+              </a>
             </li>
             <li
               onMouseLeave={handleDropdownMouseLeave}
@@ -215,58 +101,29 @@ function Navbar() {
                   Gallery
                 </a>
                 <a className="dropdown-item" href="/portfolio-creative">
-                  Portfolio Creative
-                </a>
-                <a
-                  className="dropdown-item"
-                  href="/portfolio-creative-carousel"
-                >
-                  Creative Carousel
+                  Creative
                 </a>
                 <a className="dropdown-item" href="/portfolio-grid">
-                  Portfolio Grid
+                  Grid
                 </a>
                 <a className="dropdown-item" href="/portfolio-masonry">
-                  Portfolio Masonry
-                </a>
-                <a className="dropdown-item" href="/project-details">
-                  Project Details
-                </a>
-              </div>
-            </li>
-            <li
-              onMouseLeave={handleDropdownMouseLeave}
-              onMouseMove={handleDropdownMouseMove}
-              className="nav-item dropdown"
-            >
-              <a
-                className="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span className="rolling-text">Blogs</span>
-              </a>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="/blog-classic">
-                  Blog Standerd
-                </a>
-                <a className="dropdown-item" href="/blog-grid-sidebar">
-                  Grid With Sidebar
-                </a>
-                <a className="dropdown-item" href="/blog-grid-3column">
-                  Grid Three Column
-                </a>
-                <a className="dropdown-item" href="/blog-details">
-                  Blog Details
+                  Masonry
                 </a>
               </div>
             </li>
             <li className="nav-item">
+              <a className="nav-link" href="/page-team">
+                <span className="rolling-text">Artists</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/blog-classic">
+                <span className="rolling-text">Blog</span>
+              </a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="/page-contact">
-                <span className="rolling-text">Contact Us</span>
+                <span className="rolling-text">Contact</span>
               </a>
             </li>
           </ul>
@@ -277,7 +134,7 @@ function Navbar() {
             href="/page-contact"
             className="butn butn-sm butn-bg main-colorbg radius-5"
           >
-            <span className="text">Let&apos;s contact</span>
+            <span className="text">Let&apos;s talk</span>
           </a>
         </div>
       </div>
