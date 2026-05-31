@@ -19,10 +19,8 @@ import Team from '@/components/home-modern-studio/Team';
 import Testimonials from '@/components/home-modern-studio/Testimonials';
 
 export const metadata = {
-  title: 'Elevate Art Entertainment',
+  title: { absolute: 'Elevate Art Entertainment' },
   icons: {
-    icon: '/assets/imgs/favicon.ico',
-    shortcut: '/assets/imgs/favicon.ico',
     other: generateStylesheetObject([
       '/assets/css/plugins.css',
       '/assets/css/style.css',

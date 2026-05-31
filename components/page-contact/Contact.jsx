@@ -1,36 +1,78 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 function Contact() {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [status, setStatus] = useState('idle'); // idle | sending | ok | error
+  const [errorMsg, setErrorMsg] = useState('');
+
+  function handleChange(e) {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (status === 'sending') return;
+    setStatus('sending');
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/contact/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setStatus('error');
+        setErrorMsg(data?.error || 'Something went wrong.');
+        return;
+      }
+      setStatus('ok');
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      setStatus('error');
+      setErrorMsg('Network error. Please try again.');
+    }
+  }
+
   return (
     <section className="contact section-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 valign">
             <div className="sec-head info-box full-width md-mb80">
-              <div className="phone fz-30 fw-600 underline main-color">
-                <a href="#0">+1 840 841 25 69</a>
-              </div>
-              <div className="morinfo mt-50 pb-30 bord-thin-bottom">
-                <h6 className="mb-15">Address</h6>
-                <p>Besòs 1, 08174 Sant Cugat del Vallès, Barcelona</p>
-              </div>
               <div className="morinfo mt-30 pb-30 bord-thin-bottom">
                 <h6 className="mb-15">Email</h6>
-                <p>Support@UiCamp.com</p>
+                <p>
+                  <a href="mailto:hello@elevateartentertainment.com">
+                    hello@elevateartentertainment.com
+                  </a>
+                </p>
+              </div>
+              <div className="morinfo mt-30 pb-30 bord-thin-bottom">
+                <h6 className="mb-15">Address</h6>
+                <p>Cliffside Park, NJ — United States</p>
               </div>
 
               <div className="social-icon mt-50">
-                <a href="#0">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-dribbble"></i>
-                </a>
-                <a href="#0">
-                  <i className="fab fa-behance"></i>
-                </a>
-                <a href="#0">
+                <a href="#0" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#0" aria-label="Spotify">
+                  <i className="fab fa-spotify"></i>
+                </a>
+                <a href="#0" aria-label="YouTube">
+                  <i className="fab fa-youtube"></i>
+                </a>
+                <a href="#0" aria-label="TikTok">
+                  <i className="fab fa-tiktok"></i>
                 </a>
               </div>
             </div>
@@ -46,10 +88,21 @@ function Contact() {
               <form
                 id="contact-form"
                 className="form2"
-                method="post"
-                action="contact.php"
+                onSubmit={handleSubmit}
+                noValidate
               >
-                <div className="messages"></div>
+                <div className="messages" aria-live="polite">
+                  {status === 'ok' && (
+                    <p style={{ color: '#9be5a8', marginBottom: 20 }}>
+                      ✓ Thanks — we&rsquo;ll get back to you soon.
+                    </p>
+                  )}
+                  {status === 'error' && errorMsg && (
+                    <p style={{ color: '#ff6b6b', marginBottom: 20 }}>
+                      {errorMsg}
+                    </p>
+                  )}
+                </div>
 
                 <div className="controls row">
                   <div className="col-lg-6">
@@ -59,7 +112,10 @@ function Contact() {
                         type="text"
                         name="name"
                         placeholder="Name"
-                        required="required"
+                        required
+                        value={form.name}
+                        onChange={handleChange}
+                        disabled={status === 'sending'}
                       />
                     </div>
                   </div>
@@ -71,7 +127,10 @@ function Contact() {
                         type="email"
                         name="email"
                         placeholder="Email"
-                        required="required"
+                        required
+                        value={form.email}
+                        onChange={handleChange}
+                        disabled={status === 'sending'}
                       />
                     </div>
                   </div>
@@ -83,6 +142,9 @@ function Contact() {
                         type="text"
                         name="subject"
                         placeholder="Subject"
+                        value={form.subject}
+                        onChange={handleChange}
+                        disabled={status === 'sending'}
                       />
                     </div>
                   </div>
@@ -94,15 +156,21 @@ function Contact() {
                         name="message"
                         placeholder="Message"
                         rows="4"
-                        required="required"
+                        required
+                        value={form.message}
+                        onChange={handleChange}
+                        disabled={status === 'sending'}
                       ></textarea>
                     </div>
                     <div className="mt-30">
                       <button
                         type="submit"
                         className="butn butn-full butn-bord radius-30"
+                        disabled={status === 'sending'}
                       >
-                        <span className="text">Let&lsquo;s Talk</span>
+                        <span className="text">
+                          {status === 'sending' ? 'Sending…' : "Let's Talk"}
+                        </span>
                       </button>
                     </div>
                   </div>
