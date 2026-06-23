@@ -1,4 +1,24 @@
 /* =====================================================================
+   COLOR DE RESALTADO (marca) — un solo lugar.
+   Para usar el color del cliente, cambia SOLO esta línea: --brand.
+   Todo el sitio (botones, iconos, precios, marquee, footer) lo usa.
+   ===================================================================== */
+:root {
+  --brand: #e3ff04;
+  --theme-color: var(--brand);
+  --yellow-color: var(--brand);
+}
+
+/* Marquee: quitar el morado del template y usar el color de marca */
+.marquee-wrap {
+  background: var(--brand) !important;
+}
+.marquee-wrap .m-item a,
+.marquee-wrap .m-item a i {
+  color: #0a0c00 !important;
+}
+
+/* =====================================================================
    Overrides de Elevate: legibilidad sobre fondo oscuro (body.bg-title)
    en las páginas internas del template (blog, portafolio, detalles).
    ===================================================================== */
