@@ -25,6 +25,32 @@ export default function Footer7() {
           </div>
         </div>
       </div>
+
+      {/* Crédito de Vulqo (agencia) */}
+      <div style={{ backgroundColor: "#0a0c00", padding: "16px 0" }}>
+        <div className="container text-center">
+          <a
+            href="https://vulqo.us"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "9px",
+              color: "#9fa2ad",
+              fontSize: "13px",
+              letterSpacing: "0.3px",
+            }}
+          >
+            Hecho con fuego por
+            <img
+              src="/assets/img/vulqo.png"
+              alt="Vulqo"
+              style={{ height: "20px", width: "auto", display: "block" }}
+            />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
