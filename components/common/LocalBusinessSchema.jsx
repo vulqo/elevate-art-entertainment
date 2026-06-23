@@ -10,11 +10,11 @@ export default function LocalBusinessSchema() {
     name: site.name,
     description:
       "Estudio de grabación, producción musical y contenido visual en Downtown Cincinnati. Grabación, beats, mezcla y máster, distribución digital, video musical y fotografía.",
-    url: "https://elevate-art-entertainment-vulqollc.vercel.app",
+    url: site.url,
     email: site.email,
     telephone: site.whatsappDisplay,
-    image:
-      "https://elevate-art-entertainment-vulqollc.vercel.app/assets/img/logo.svg",
+    image: `${site.url}/opengraph-image`,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Cincinnati",

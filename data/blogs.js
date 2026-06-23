@@ -291,6 +291,19 @@ export const posts = [
   },
 ];
 
+// Convierte "15 de junio, 2026" a "2026-06-15" (para schema y sitemap).
+const MESES = {
+  enero: "01", febrero: "02", marzo: "03", abril: "04", mayo: "05", junio: "06",
+  julio: "07", agosto: "08", septiembre: "09", octubre: "10", noviembre: "11", diciembre: "12",
+};
+export function postISODate(dateStr) {
+  const m = String(dateStr).match(/(\d+)\s+de\s+(\w+),?\s+(\d{4})/i);
+  if (!m) return undefined;
+  const mm = MESES[m[2].toLowerCase()];
+  if (!mm) return undefined;
+  return `${m[3]}-${mm}-${String(m[1]).padStart(2, "0")}`;
+}
+
 // Compatibilidad con los componentes del template.
 export const blogs = posts;
 export const blogs2 = posts;

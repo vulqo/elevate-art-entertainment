@@ -7,6 +7,8 @@ import Breadcumb from "@/components/service/Breadcumb";
 import Features2 from "@/components/service/Features2";
 import ServiceNotes from "@/components/service/ServiceNotes";
 import { buildMeta } from "@/data/seo";
+import { featureData4 } from "@/data/features";
+import { site } from "@/data/site";
 
 export const metadata = buildMeta({
   title: "Servicios y precios",
@@ -15,10 +17,30 @@ export const metadata = buildMeta({
   path: "/service",
 });
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Estudio de grabación y producción musical",
+  provider: { "@type": "MusicGroup", name: site.name },
+  areaServed: "Cincinnati, Ohio",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Servicios del estudio",
+    itemListElement: featureData4.map((s) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: s.title, description: s.text },
+    })),
+  },
+};
+
 export default function ServicePage() {
   return (
     <>
       <DarkBody />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Header7 />
       <Breadcumb />
       <Features2 />

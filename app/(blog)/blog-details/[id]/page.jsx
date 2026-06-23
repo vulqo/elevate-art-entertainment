@@ -4,7 +4,7 @@ import MarqueeComponent from "@/components/common/Marquee";
 import Footer7 from "@/components/footers/Footer7";
 import Header7 from "@/components/headers/Header7";
 import DarkBody from "@/components/common/DarkBody";
-import { allBlogs } from "@/data/blogs";
+import { allBlogs, postISODate } from "@/data/blogs";
 import { site } from "@/data/site";
 import { buildMeta } from "@/data/seo";
 
@@ -26,14 +26,21 @@ export default async function BlogPageDetails(props) {
   const params = await props.params;
   const post = allBlogs.find((p) => p.id == params.id) || allBlogs[0];
 
+  const iso = postISODate(post.date);
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription || post.excerpt,
     inLanguage: "es",
+    ...(iso ? { datePublished: iso, dateModified: iso } : {}),
+    image: `${site.url}/opengraph-image`,
     author: { "@type": "Organization", name: site.name },
-    publisher: { "@type": "Organization", name: site.name },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: { "@type": "ImageObject", url: `${site.url}/assets/img/logo.svg` },
+    },
     mainEntityOfPage: `${site.url}/blog-details/${post.id}`,
     articleSection: post.category,
   };
