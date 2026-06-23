@@ -31,7 +31,8 @@ export default function Blogs() {
                       backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${placeholderImg(
                         `blog-${elm.id}`,
                         600,
-                        400
+                        400,
+                        "music,studio,microphone"
                       )})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",

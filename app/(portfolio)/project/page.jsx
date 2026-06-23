@@ -5,14 +5,15 @@ import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/portfolio/Breadcumb";
 import VideoGallery from "@/components/portfolio/VideoGallery";
+import { buildMeta } from "@/data/seo";
 import React from "react";
 
-export const metadata = {
+export const metadata = buildMeta({
   title: "Portafolio",
   description:
     "Trabajos del estudio Elevate Art Entertainment en Cincinnati: producción musical, videoclips, grabación y contenido visual.",
-  alternates: { canonical: "/project" },
-};
+  path: "/project",
+});
 
 export default function ProjectPage() {
   return (

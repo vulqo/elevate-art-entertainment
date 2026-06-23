@@ -23,7 +23,8 @@ export default function ServiceDetails({ serviceId }) {
                 backgroundImage: `linear-gradient(rgba(10,12,0,0.45), rgba(10,12,0,0.6)), url(${placeholderImg(
                   `serv-${serviceItem.id}`,
                   1400,
-                  600
+                  600,
+                  "recording-studio,music,microphone"
                 )})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",

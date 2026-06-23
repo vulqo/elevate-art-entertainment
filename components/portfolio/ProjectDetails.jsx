@@ -21,7 +21,8 @@ export default function ProjectDetails({ portfolioId }) {
             backgroundImage: `linear-gradient(rgba(10,12,0,0.4), rgba(10,12,0,0.55)), url(${placeholderImg(
               `proj-${portfolioItem.id}`,
               1400,
-              700
+              700,
+              "concert,music,studio"
             )})`,
             backgroundSize: "cover",
             backgroundPosition: "center",

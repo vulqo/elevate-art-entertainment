@@ -1,43 +1,36 @@
-import Header3 from "@/components/headers/Header3";
-import Image from "next/image";
+import Header7 from "@/components/headers/Header7";
+import Footer7 from "@/components/footers/Footer7";
+import DarkBody from "@/components/common/DarkBody";
 import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title: "Not Found || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Página no encontrada | Elevate Art Entertainment",
 };
 
-export default function NotFoundPage() {
+export default function ErrorPage() {
   return (
     <>
-      <Header3 />
-      <div className="error-wrapper text-center">
+      <DarkBody />
+      <Header7 />
+      <div className="error-wrapper text-center space">
         <div className="container">
-          <Image
-            width={856}
-            height={246}
-            className="mb-50"
-            src="/assets/img/normal/404.png"
-            alt="error"
-          />
-          <h2>Look Like You’re Lost</h2>
+          <h1 style={{ fontSize: "120px", lineHeight: 1, color: "var(--brand)" }}>
+            404
+          </h1>
+          <h2 className="text-smoke mt-20">Esta página no existe</h2>
           <p className="sec-text mb-30">
-            The link you followed probably broken or the page has been removed
+            El enlace está roto o la página se movió. Volvamos al inicio.
           </p>
-          <Link scroll={false} href="/" className="link-btn">
+          <Link scroll={false} href="/" className="btn style2">
             <span className="link-effect">
-              <span className="effect-1">back to home</span>
-              <span className="effect-1">back to home</span>
+              <span className="effect-1">VOLVER AL INICIO</span>
+              <span className="effect-1">VOLVER AL INICIO</span>
             </span>
-            <Image
-              width={13}
-              height={13}
-              src="/assets/img/icon/arrow-left-top.svg"
-              alt="icon"
-            />
           </Link>
         </div>
       </div>
+      <Footer7 />
     </>
   );
 }

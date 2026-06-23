@@ -52,7 +52,8 @@ export default function Projects() {
                     backgroundImage: `linear-gradient(rgba(10,12,0,0.35), rgba(10,12,0,0.55)), url(${placeholderImg(
                       `port-${elm.id}`,
                       700,
-                      heights[i % heights.length] + 100
+                      heights[i % heights.length] + 100,
+                      "concert,music,studio"
                     )})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",

@@ -19,7 +19,8 @@ export default function Hero() {
         backgroundImage: `linear-gradient(rgba(10,12,0,0.78), rgba(10,12,0,0.88)), url(${placeholderImg(
           "hero",
           1600,
-          900
+          900,
+          "recording-studio,microphone,music"
         )})`,
         backgroundSize: "cover",
         backgroundPosition: "center",

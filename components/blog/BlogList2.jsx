@@ -30,7 +30,8 @@ export default function BlogList2() {
                               backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${placeholderImg(
                                 `blogp-${elm.id}`,
                                 700,
-                                500
+                                500,
+                                "music,studio,microphone"
                               )})`,
                               backgroundSize: "cover",
                               backgroundPosition: "center",

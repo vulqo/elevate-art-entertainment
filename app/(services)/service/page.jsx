@@ -6,13 +6,14 @@ import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/service/Breadcumb";
 import Features2 from "@/components/service/Features2";
 import ServiceNotes from "@/components/service/ServiceNotes";
+import { buildMeta } from "@/data/seo";
 
-export const metadata = {
+export const metadata = buildMeta({
   title: "Servicios y precios",
   description:
     "Precios del estudio en Cincinnati: grabación $25/hora, beats desde $90, mezcla $80, máster $30, distribución $15 por canción, video musical desde $180 y diseño de flyers.",
-  alternates: { canonical: "/service" },
-};
+  path: "/service",
+});
 
 export default function ServicePage() {
   return (
