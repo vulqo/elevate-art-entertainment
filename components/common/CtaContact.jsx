@@ -1,9 +1,8 @@
 "use client";
-import Socials from "@/components/footers/component/Socials";
 import React, { useState } from "react";
 import { waLink } from "@/data/site";
 
-// CTA: WhatsApp como acción principal + formulario (que también abre WhatsApp).
+// CTA: WhatsApp como acción principal (izquierda) + formulario del template (derecha).
 export default function CtaContact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
@@ -23,14 +22,14 @@ export default function CtaContact() {
   return (
     <div className="cta-area-1 overflow-hidden bg-title space text-xl-start text-center">
       <div className="container">
-        <div className="row justify-content-xl-between justify-content-center gy-5">
+        <div className="row justify-content-xl-between justify-content-center align-items-center gy-5">
           <div className="col-xl-5 col-lg-10">
-            <div className="title-area mb-xl-0 mb-40">
+            <div className="title-area mb-0">
               <span className="sub-title">Reserva</span>
-              <h2 className="sec-title text-smoke">
+              <h3 className="text-smoke" style={{ fontSize: "2.2rem", lineHeight: 1.2 }}>
                 ¿Listo para grabar tu próximo hit?
-              </h2>
-              <p className="sec-text mt-20">
+              </h3>
+              <p className="sec-text mt-20 mb-30">
                 La forma más rápida es por WhatsApp: te respondemos al momento y
                 agendamos tu sesión. Hablamos español e inglés.
               </p>
@@ -38,16 +37,17 @@ export default function CtaContact() {
                 href={waLink("Hola, quiero reservar una sesión en el estudio.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn style2 mt-20"
+                className="btn style2"
               >
                 <span className="link-effect">
-                  <span className="effect-1">RESERVA POR WHATSAPP</span>
-                  <span className="effect-1">RESERVA POR WHATSAPP</span>
+                  <span className="effect-1">
+                    <i className="fab fa-whatsapp me-2"></i>RESERVA POR WHATSAPP
+                  </span>
+                  <span className="effect-1">
+                    <i className="fab fa-whatsapp me-2"></i>RESERVA POR WHATSAPP
+                  </span>
                 </span>
               </a>
-              <div className="social-btn style3 justify-content-xl-start justify-content-center mt-40">
-                <Socials />
-              </div>
             </div>
           </div>
           <div className="col-xl-6">

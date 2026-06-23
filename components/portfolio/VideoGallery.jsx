@@ -4,25 +4,30 @@ import { site } from "@/data/site";
 
 export default function VideoGallery() {
   return (
-    <div className="project-area-8 space">
+    <div className="portfolio-area-1 space">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-8 text-center">
             <div className="title-area">
-              <h2 className="sec-title">Trabajos recientes</h2>
+              <span className="sub-title">Portafolio</span>
+              <h2 className="sec-title text-smoke">Trabajos recientes</h2>
               <p className="sec-text mt-20">
-                Una muestra de videos. Pronto sumamos más producciones,
-                fotografía y diseño.
+                Una muestra de videos del estudio. Pronto sumamos más
+                producciones, fotografía y diseño.
               </p>
             </div>
           </div>
         </div>
-        <div className="row gy-4">
+        <div className="row gy-5">
           {portfolioVideos.map((v, i) => (
-            <div key={i} className="col-lg-4 col-md-6">
+            <div key={i} className="col-lg-6">
               <div
-                className="portfolio-thumb"
-                style={{ position: "relative", paddingTop: "56.25%" }}
+                style={{
+                  position: "relative",
+                  paddingTop: "56.25%",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                }}
               >
                 <iframe
                   src={`https://www.youtube-nocookie.com/embed/${v.id}`}
@@ -37,14 +42,15 @@ export default function VideoGallery() {
                     width: "100%",
                     height: "100%",
                     border: 0,
-                    borderRadius: "8px",
                   }}
                 ></iframe>
               </div>
+              <h4 className="text-smoke mt-30 mb-2">{v.title}</h4>
+              <p className="sec-text mb-0">{v.desc}</p>
             </div>
           ))}
         </div>
-        <div className="text-center mt-50">
+        <div className="text-center mt-60">
           <a
             href={site.youtube}
             target="_blank"

@@ -9,16 +9,16 @@ export default function StudioIntro() {
           <div className="col-lg-7">
             <div className="title-area mb-0">
               <span className="sub-title">Renta del estudio</span>
-              <h2 className="sec-title">
+              <h2 className="sec-title text-smoke">
                 Renta nuestro estudio en Downtown Cincinnati
               </h2>
-              <p className="mt-20">
+              <p className="sec-text mt-20">
                 Renta el estudio por hora para tus ensayos de presentaciones,
                 sesiones de fotos o producción de contenido. Un espacio
                 profesional con tratamiento acústico, en el corazón de Downtown
                 Cincinnati, Ohio.
               </p>
-              <p className="mt-15">
+              <p className="sec-text mt-15">
                 Somos un estudio de grabación, producción musical y contenido
                 visual. Atención bilingüe: hablamos español e inglés, con
                 entregas rápidas. Ideal para artistas, creadores de contenido y

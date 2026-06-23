@@ -8,10 +8,9 @@ export const site = {
   region: "Ohio",
   country: "United States",
 
-  // PENDIENTE: número real de WhatsApp en formato internacional, solo dígitos
-  // (código de país + número). Ej: 15135551234
-  whatsapp: "15135550100",
-  whatsappDisplay: "+1 (513) 555-0100",
+  // WhatsApp en formato internacional, solo dígitos (código de país + número).
+  whatsapp: "15137201583",
+  whatsappDisplay: "+1 (513) 720-1583",
 
   // PENDIENTE: usuario real de Instagram (sin la @)
   instagram: "elevateartentertainment",

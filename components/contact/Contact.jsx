@@ -38,8 +38,8 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-form-wrap">
               <div className="title-area mb-30">
-                <h2 className="sec-title">¿Listo para grabar?</h2>
-                <p>
+                <h2 className="sec-title text-smoke">¿Listo para grabar?</h2>
+                <p className="sec-text">
                   Llena el formulario y se abrirá WhatsApp con tu mensaje listo
                   para enviar. También puedes escribirnos directo.
                 </p>

@@ -18,7 +18,7 @@ const SERVICES = [
   },
   {
     id: 3,
-    faIcon: "fa-sliders",
+    faIcon: "fa-headphones",
     title: "Producción musical completa",
     text: "Llevamos tu idea a una canción terminada: dirección creativa, grabación, mezcla y máster.",
     price: "Mezcla $80 · Máster $30",

@@ -3,6 +3,21 @@
    en las páginas internas del template (blog, portafolio, detalles).
    ===================================================================== */
 
+/* Red de seguridad: títulos y textos de sección legibles sobre oscuro */
+body.bg-title .title-area .sec-title,
+body.bg-title .title-area h2,
+body.bg-title .title-area h3,
+body.bg-title .service-details-page-area h2,
+body.bg-title .service-details-page-area h3,
+body.bg-title .project-details-page-area h2,
+body.bg-title .project-details-page-area h3 {
+  color: #f4f5f6;
+}
+body.bg-title .title-area .sec-text,
+body.bg-title .title-area > p {
+  color: #b9bcc1;
+}
+
 body.bg-title .portfolio-title a,
 body.bg-title .blog-title a,
 body.bg-title .blog-post-content .title,
@@ -51,4 +66,34 @@ body.bg-title .tagcloud a {
 body.bg-title .tagcloud a:hover {
   background-color: var(--theme-color) !important;
   color: #0a0c00 !important;
+}
+
+/* Formularios sobre fondo oscuro: texto e inputs legibles */
+body.bg-title .form-control,
+body.bg-title .contact-form input,
+body.bg-title .contact-form textarea {
+  color: #f1f2f3 !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+body.bg-title .form-control::placeholder {
+  color: #9fa2ad !important;
+  opacity: 1;
+}
+body.bg-title .contact-form input:focus,
+body.bg-title .contact-form textarea:focus {
+  border-color: var(--theme-color) !important;
+}
+
+/* Tarjetas de info de contacto legibles sobre oscuro */
+body.bg-title .contact-info-card,
+body.bg-title .contact-feature-wrap,
+body.bg-title .contact-info_box {
+  color: #cfd1d4;
+}
+body.bg-title .contact-info-card h4,
+body.bg-title .contact-info-card h3,
+body.bg-title .contact-info_box h3,
+body.bg-title .contact-info_box h4 {
+  color: #f1f2f3;
 }

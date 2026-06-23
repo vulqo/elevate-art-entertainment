@@ -4,7 +4,7 @@ import Header7 from "@/components/headers/Header7";
 import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/portfolio/Breadcumb";
-import Projects from "@/components/portfolio/Projects";
+import VideoGallery from "@/components/portfolio/VideoGallery";
 import React from "react";
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function ProjectPage() {
       <DarkBody />
       <Header7 />
       <Breadcumb />
-      <Projects />
+      <VideoGallery />
       <CtaContact />
       <MarqueeComponent />
       <Footer7 />
