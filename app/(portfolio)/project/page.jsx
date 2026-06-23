@@ -4,7 +4,7 @@ import Header7 from "@/components/headers/Header7";
 import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/portfolio/Breadcumb";
-import VideoGallery from "@/components/portfolio/VideoGallery";
+import WorkGallery from "@/components/portfolio/WorkGallery";
 import { buildMeta } from "@/data/seo";
 import React from "react";
 
@@ -21,7 +21,7 @@ export default function ProjectPage() {
       <DarkBody />
       <Header7 />
       <Breadcumb />
-      <VideoGallery />
+      <WorkGallery />
       <CtaContact />
       <MarqueeComponent />
       <Footer7 />

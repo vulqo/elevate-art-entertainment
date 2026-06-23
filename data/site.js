@@ -14,8 +14,7 @@ export const site = {
   whatsapp: "15137201583",
   whatsappDisplay: "+1 (513) 720-1583",
 
-  // PENDIENTE: usuario real de Instagram (sin la @)
-  instagram: "elevateartentertainment",
+  instagram: "elevate_artt",
 
   // YouTube del artista (placeholder de portafolio)
   youtube: "https://www.youtube.com/@eslordhighh",
