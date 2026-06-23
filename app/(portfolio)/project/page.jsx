@@ -5,6 +5,7 @@ import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/portfolio/Breadcumb";
 import WorkGallery from "@/components/portfolio/WorkGallery";
+import SpotifyEmbed from "@/components/portfolio/SpotifyEmbed";
 import { buildMeta } from "@/data/seo";
 import React from "react";
 
@@ -22,6 +23,7 @@ export default function ProjectPage() {
       <Header7 />
       <Breadcumb />
       <WorkGallery />
+      <SpotifyEmbed />
       <CtaContact />
       <MarqueeComponent />
       <Footer7 />
