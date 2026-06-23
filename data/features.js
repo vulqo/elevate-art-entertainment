@@ -42,14 +42,33 @@ const SERVICES = [
     faIcon: "fa-copyright",
     title: "Registro de derechos de autor",
     text: "Registra tu copyright y protege legalmente todo lo que creas.",
-    price: "Cotización",
+    price: "Desde $50",
   },
   {
     id: 7,
     faIcon: "fa-palette",
     title: "Diseño gráfico",
     text: "Flyers y artes para tus lanzamientos y eventos, listos para redes.",
-    price: "Cotización",
+    price: "Desde $30",
+  },
+];
+
+// Tipos de licencia de beats (precios estándar; Luis los revisa luego).
+export const BEAT_LICENSES = [
+  {
+    name: "Básica",
+    price: "$90",
+    desc: "Para empezar: streaming y uso no comercial. El beat puede venderse a otros.",
+  },
+  {
+    name: "Premium",
+    price: "$150",
+    desc: "Distribución en plataformas y monetización. Incluye los archivos del proyecto.",
+  },
+  {
+    name: "Exclusiva",
+    price: "$300",
+    desc: "El beat es solo tuyo: se retira de la venta y nadie más lo usa.",
   },
 ];
 

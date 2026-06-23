@@ -19,8 +19,7 @@ export const site = {
   // YouTube del artista (placeholder de portafolio)
   youtube: "https://www.youtube.com/@eslordhighh",
 
-  // PENDIENTE: correo real de contacto
-  email: "hello@elevateartentertainment.com",
+  email: "info@elevateartentertainment.com",
 };
 
 // Construye un enlace de WhatsApp con un mensaje opcional ya escrito.
