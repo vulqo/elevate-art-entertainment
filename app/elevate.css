@@ -1,0 +1,54 @@
+/* =====================================================================
+   Overrides de Elevate: legibilidad sobre fondo oscuro (body.bg-title)
+   en las páginas internas del template (blog, portafolio, detalles).
+   ===================================================================== */
+
+body.bg-title .portfolio-title a,
+body.bg-title .blog-title a,
+body.bg-title .blog-post-content .title,
+body.bg-title .blog-post-content .title a,
+body.bg-title .widget-title,
+body.bg-title .widget .widget-title,
+body.bg-title .breadcumb-menu li,
+body.bg-title .breadcumb-menu li a,
+body.bg-title .project-details-info .list-wrap li,
+body.bg-title .pagination a {
+  color: #f1f2f3;
+}
+
+body.bg-title .sec-text,
+body.bg-title .blog-post-content p,
+body.bg-title .blog-post-meta li,
+body.bg-title .blog-post-meta a,
+body.bg-title .post-meta-item a,
+body.bg-title .portfolio-meta a,
+body.bg-title .project-details-info .list-wrap li span,
+body.bg-title .widget,
+body.bg-title .sidebar-area p,
+body.bg-title .about-list li {
+  color: #b9bcc1;
+}
+
+/* Inputs de búsqueda/sidebar y widgets sobre fondo oscuro */
+body.bg-title .widget {
+  background-color: #15181d;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Tags / categorías como chips legibles */
+body.bg-title .categories a {
+  color: #cfd1d4;
+}
+body.bg-title .tagcloud a {
+  display: inline-block;
+  margin: 0 6px 8px 0;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background-color: #1c2026 !important;
+  color: #cfd1d4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+body.bg-title .tagcloud a:hover {
+  background-color: var(--theme-color) !important;
+  color: #0a0c00 !important;
+}

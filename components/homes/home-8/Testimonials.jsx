@@ -24,7 +24,8 @@ export default function Testimonials() {
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-8">
             <div className="title-area text-center">
-              <h2 className="sec-title text-smoke">Testimonials</h2>
+              <span className="sub-title">Testimonios</span>
+              <h2 className="sec-title text-smoke">Lo que dicen los artistas</h2>
             </div>
           </div>
         </div>

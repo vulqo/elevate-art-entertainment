@@ -1,9 +1,10 @@
 "use client";
-
-import { useState } from "react";
+import Socials from "@/components/footers/component/Socials";
+import React, { useState } from "react";
 import { waLink } from "@/data/site";
 
-export default function Contact() {
+// CTA: WhatsApp como acción principal + formulario (que también abre WhatsApp).
+export default function CtaContact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   function handleChange(e) {
@@ -20,30 +21,41 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-area-1 space bg-title shape-mockup-wrap">
-      <div
-        className="contact-map shape-mockup wow img-custom-anim-left animated"
-        data-wow-duration="1.5s"
-        data-wow-delay="0.2s"
-        style={{ top: "-100px", left: 0, bottom: "140px" }}
-      >
-        <iframe
-          src="https://maps.google.com/maps?q=Downtown%20Cincinnati%2C%20OH&t=m&z=13&output=embed&iwloc=near"
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+    <div className="cta-area-1 overflow-hidden bg-title space text-xl-start text-center">
       <div className="container">
-        <div className="row align-items-center justify-content-end">
-          <div className="col-lg-6">
-            <div className="contact-form-wrap">
-              <div className="title-area mb-30">
-                <h2 className="sec-title">¿Listo para grabar?</h2>
-                <p>
-                  Llena el formulario y se abrirá WhatsApp con tu mensaje listo
-                  para enviar. También puedes escribirnos directo.
-                </p>
+        <div className="row justify-content-xl-between justify-content-center gy-5">
+          <div className="col-xl-5 col-lg-10">
+            <div className="title-area mb-xl-0 mb-40">
+              <span className="sub-title">Reserva</span>
+              <h2 className="sec-title text-smoke">
+                ¿Listo para grabar tu próximo hit?
+              </h2>
+              <p className="sec-text mt-20">
+                La forma más rápida es por WhatsApp: te respondemos al momento y
+                agendamos tu sesión. Hablamos español e inglés.
+              </p>
+              <a
+                href={waLink("Hola, quiero reservar una sesión en el estudio.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn style2 mt-20"
+              >
+                <span className="link-effect">
+                  <span className="effect-1">RESERVA POR WHATSAPP</span>
+                  <span className="effect-1">RESERVA POR WHATSAPP</span>
+                </span>
+              </a>
+              <div className="social-btn style3 justify-content-xl-start justify-content-center mt-40">
+                <Socials />
               </div>
+            </div>
+          </div>
+          <div className="col-xl-6">
+            <div className="contact-form-wrap">
+              <p className="mb-20 text-smoke">
+                ¿Prefieres dejarnos tu mensaje? Llénalo y lo enviamos por
+                WhatsApp con un clic.
+              </p>
               <form onSubmit={handleSubmit} className="contact-form ajax-contact">
                 <div className="row">
                   <div className="col-md-6">
@@ -53,7 +65,6 @@ export default function Contact() {
                         type="text"
                         className="form-control style-border"
                         name="name"
-                        id="name"
                         placeholder="Nombre*"
                         value={form.name}
                         onChange={handleChange}
@@ -66,7 +77,6 @@ export default function Contact() {
                         type="text"
                         className="form-control style-border"
                         name="email"
-                        id="email"
                         placeholder="Correo (opcional)"
                         value={form.email}
                         onChange={handleChange}
@@ -79,8 +89,7 @@ export default function Contact() {
                         required
                         name="message"
                         placeholder="¿En qué te ayudamos?*"
-                        id="contactForm"
-                        className="form-control style-border"
+                        className="form-control style-border style2"
                         value={form.message}
                         onChange={handleChange}
                       ></textarea>

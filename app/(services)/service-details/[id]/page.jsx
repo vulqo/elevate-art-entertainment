@@ -1,31 +1,26 @@
 import MarqueeComponent from "@/components/common/Marquee";
-import Footer8 from "@/components/footers/Footer8";
-import Header3 from "@/components/headers/Header3";
-
+import Footer7 from "@/components/footers/Footer7";
+import Header7 from "@/components/headers/Header7";
+import DarkBody from "@/components/common/DarkBody";
+import CtaContact from "@/components/common/CtaContact";
 import ServiceDetails from "@/components/service/ServiceDetails";
-import { allFeatures } from "@/data/features";
-
-//For Static Side Genaration(SSG)
-
-// export async function generateStaticParams() {
-//   return allFeatures.map((elm) => ({
-//     id: `${elm.id}`,
-//   }));
-// }
 
 export const metadata = {
-  title:
-    "Service Details || Frisk - Creative Agency & Portfolio Nextjs Template",
+  title: "Detalle del servicio",
+  description:
+    "Detalle de los servicios del estudio Elevate Art Entertainment en Downtown Cincinnati.",
 };
 
 export default async function ServicePageDetails(props) {
   const params = await props.params;
   return (
     <>
-      <Header3 />
+      <DarkBody />
+      <Header7 />
       <ServiceDetails serviceId={params.id} />
+      <CtaContact />
       <MarqueeComponent />
-      <Footer8 />
+      <Footer7 />
     </>
   );
 }

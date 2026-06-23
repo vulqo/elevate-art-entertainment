@@ -27,8 +27,8 @@ export default function ServiceNotes() {
         <div className="row gy-4">
           {notes.map((n, i) => (
             <div key={i} className="col-lg-6">
-              <div className="feature-card">
-                <h4 className="feature-card-title">{n.title}</h4>
+              <div className="feature-card style2">
+                <h4 className="feature-card-title text-smoke">{n.title}</h4>
                 <p className="feature-card-text">{n.text}</p>
               </div>
             </div>

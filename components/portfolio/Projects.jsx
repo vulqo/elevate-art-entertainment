@@ -3,34 +3,29 @@ import { portfolioData } from "@/data/portfolio";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-//
+
+// Alturas variadas para conservar el efecto masonry (placeholder).
+const heights = [420, 300, 300, 360, 300, 420];
 
 export default function Projects() {
   const isotopContainer = useRef();
   const initIsotop = async () => {
     const Isotope = (await import("isotope-layout")).default;
     const imagesloaded = (await import("imagesloaded")).default;
-
-    // Initialize Isotope in the mounted hook
     const isotope = new Isotope(isotopContainer.current, {
       itemSelector: ".filter-item",
-      layoutMode: "masonry", // or 'fitRows', depending on your layout needs
+      layoutMode: "masonry",
     });
-    imagesloaded(isotopContainer.current).on(
-      "progress",
-      function (instance, image) {
-        // Trigger Isotope layout
-        isotope.layout();
-      }
-    );
+    imagesloaded(isotopContainer.current).on("progress", function () {
+      isotope.layout();
+    });
+    isotope.layout();
   };
 
   useEffect(() => {
-    /////////////////////////////////////////////////////
-    // Magnate Animation
-
     initIsotop();
   }, []);
+
   return (
     <div className="portfolio-area-1 space overflow-hidden">
       <div className="container">
@@ -41,16 +36,27 @@ export default function Projects() {
           {portfolioData.map((elm, i) => (
             <div key={i} className="col-lg-6 filter-item">
               <div className={`portfolio-wrap ${i == 0 ? "mt-lg-140" : ""} `}>
-                <div className="portfolio-thumb">
-                  <Link scroll={false} href={`/project-details/${elm.id}`}>
-                    <Image
-                      width={526}
-                      height={740}
-                      src={elm.imageSrc}
-                      alt="portfolio"
-                    />
-                  </Link>
-                </div>
+                <Link
+                  scroll={false}
+                  href={`/project-details/${elm.id}`}
+                  className="portfolio-thumb"
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: `${heights[i % heights.length]}px`,
+                    borderRadius: "12px",
+                    overflow: "hidden",
+                    background:
+                      "radial-gradient(120% 120% at 70% 15%, #20242b 0%, #15181d 55%, #0c0e11 100%)",
+                  }}
+                >
+                  <i
+                    className="fas fa-play"
+                    style={{ fontSize: "44px", color: "var(--theme-color)" }}
+                  ></i>
+                </Link>
                 <div className="portfolio-details">
                   <ul className="portfolio-meta">
                     {elm.categoryLinks.map((elm2, i2) => (
@@ -60,7 +66,9 @@ export default function Projects() {
                     ))}
                   </ul>
                   <h3 className="portfolio-title">
-                    <a href="#">{elm.projectTitle}</a>
+                    <Link scroll={false} href={`/project-details/${elm.id}`}>
+                      {elm.projectTitle}
+                    </Link>
                   </h3>
                   <Link
                     scroll={false}
@@ -68,8 +76,8 @@ export default function Projects() {
                     className="link-btn"
                   >
                     <span className="link-effect">
-                      <span className="effect-1">VIEW PROJECT</span>
-                      <span className="effect-1">VIEW PROJECT</span>
+                      <span className="effect-1">VER PROYECTO</span>
+                      <span className="effect-1">VER PROYECTO</span>
                     </span>
                     <Image
                       width={13}
@@ -82,14 +90,6 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="btn-wrap justify-content-center mt-60">
-          <Link scroll={false} className="btn" href="/project-2">
-            <span className="link-effect">
-              <span className="effect-1">LOAD MORE</span>
-              <span className="effect-1">LOAD MORE</span>
-            </span>
-          </Link>
         </div>
       </div>
     </div>

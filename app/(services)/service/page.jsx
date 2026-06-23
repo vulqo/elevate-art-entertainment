@@ -1,8 +1,10 @@
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer7 from "@/components/footers/Footer7";
 import Header7 from "@/components/headers/Header7";
+import DarkBody from "@/components/common/DarkBody";
+import CtaContact from "@/components/common/CtaContact";
 import Breadcumb from "@/components/service/Breadcumb";
-import Features1 from "@/components/service/Features1";
+import Features2 from "@/components/service/Features2";
 import ServiceNotes from "@/components/service/ServiceNotes";
 
 export const metadata = {
@@ -12,13 +14,15 @@ export const metadata = {
   alternates: { canonical: "/service" },
 };
 
-export default function ServicePage1() {
+export default function ServicePage() {
   return (
     <>
+      <DarkBody />
       <Header7 />
       <Breadcumb />
-      <Features1 />
+      <Features2 />
       <ServiceNotes />
+      <CtaContact />
       <MarqueeComponent />
       <Footer7 />
     </>

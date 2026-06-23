@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import "../public/assets/css/vendor.css";
 import "../public/assets/sass/style.scss";
+import "./elevate.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ScrollTop from "@/components/common/ScrollTop";
 import "rc-slider/assets/index.css";

@@ -5,14 +5,13 @@ import React from "react";
 
 export default function Blogs() {
   return (
-    <section className="blog-area space bg-gray">
+    <section className="blog-area space">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-7 col-xl-6 col-lg-8">
             <div className="title-area text-center">
-              <h2 className="sec-title text-smoke">
-                Check Out My Latest Articles
-              </h2>
+              <span className="sub-title">Blog</span>
+              <h2 className="sec-title text-smoke">Consejos para tu música</h2>
             </div>
           </div>
         </div>
@@ -21,13 +20,23 @@ export default function Blogs() {
             <div key={i} className="col-lg-4 col-md-6">
               <div className="blog-card style3">
                 <div className="blog-img">
-                  <Link scroll={false} href={`/blog-details/${elm.id}`}>
-                    <Image
-                      width={416}
-                      height={340}
-                      src={elm.image}
-                      alt="blog image"
-                    />
+                  <Link
+                    scroll={false}
+                    href={`/blog-details/${elm.id}`}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minHeight: "240px",
+                      borderRadius: "10px",
+                      background:
+                        "radial-gradient(120% 120% at 30% 20%, #20242b 0%, #15181d 60%, #0c0e11 100%)",
+                    }}
+                  >
+                    <i
+                      className="fas fa-pen-nib"
+                      style={{ fontSize: "40px", color: "var(--theme-color)" }}
+                    ></i>
                   </Link>
                 </div>
                 <div className="blog-content">
@@ -46,8 +55,8 @@ export default function Blogs() {
                     className="link-btn"
                   >
                     <span className="link-effect">
-                      <span className="effect-1">READ MORE</span>
-                      <span className="effect-1">READ MORE</span>
+                      <span className="effect-1">LEER MÁS</span>
+                      <span className="effect-1">LEER MÁS</span>
                     </span>
                     <Image
                       width={13}

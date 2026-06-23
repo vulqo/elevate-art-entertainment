@@ -1,12 +1,10 @@
 import { blogs3 } from "@/data/blogs";
 import Link from "next/link";
 import React from "react";
-import Pagination from "./Pagination";
-import BlogSerchbar from "./BlogSerchbar";
-import Categories from "./Categories";
-import RecentPosts from "./RecentPosts";
-import Tags from "./Tags";
 import Image from "next/image";
+
+const categorias = ["Grabación", "Producción", "Video", "Distribución", "Tips"];
+const etiquetas = ["estudio", "beats", "mezcla", "máster", "Cincinnati", "voces"];
 
 export default function BlogList2() {
   return (
@@ -21,13 +19,26 @@ export default function BlogList2() {
                     <div key={i} className="col-md-6">
                       <div className="blog-post-item-two">
                         <div className="blog-post-thumb">
-                          <Link scroll={false} href={`/blog-details/${elm.id}`}>
-                            <Image
-                              width={856}
-                              height={600}
-                              src={elm.image}
-                              alt="img"
-                            />
+                          <Link
+                            scroll={false}
+                            href={`/blog-details/${elm.id}`}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              minHeight: "230px",
+                              borderRadius: "10px",
+                              background:
+                                "radial-gradient(120% 120% at 30% 20%, #20242b 0%, #15181d 60%, #0c0e11 100%)",
+                            }}
+                          >
+                            <i
+                              className="fas fa-pen-nib"
+                              style={{
+                                fontSize: "40px",
+                                color: "var(--theme-color)",
+                              }}
+                            ></i>
                           </Link>
                         </div>
                         <div className="blog-post-content">
@@ -40,10 +51,7 @@ export default function BlogList2() {
                             </ul>
                           </div>
                           <h4 className="title">
-                            <Link
-                              scroll={false}
-                              href={`/blog-details/${elm.id}`}
-                            >
+                            <Link scroll={false} href={`/blog-details/${elm.id}`}>
                               {elm.title}
                             </Link>
                           </h4>
@@ -53,8 +61,8 @@ export default function BlogList2() {
                             className="link-btn"
                           >
                             <span className="link-effect">
-                              <span className="effect-1">READ MORE</span>
-                              <span className="effect-1">READ MORE</span>
+                              <span className="effect-1">LEER MÁS</span>
+                              <span className="effect-1">LEER MÁS</span>
                             </span>
                             <Image
                               width={13}
@@ -68,15 +76,30 @@ export default function BlogList2() {
                     </div>
                   ))}
                 </div>
-                <Pagination />
               </div>
             </div>
             <div className="col-30">
               <aside className="blog__sidebar">
-                <BlogSerchbar />
-                <Categories />
-                <RecentPosts />
-                <Tags />
+                <div className="widget">
+                  <h3 className="widget-title">Categorías</h3>
+                  <ul className="rest categories">
+                    {categorias.map((c, i) => (
+                      <li key={i} className="mb-2">
+                        <a href="#">{c}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="widget">
+                  <h3 className="widget-title">Etiquetas</h3>
+                  <div className="tagcloud">
+                    {etiquetas.map((t, i) => (
+                      <a key={i} href="#">
+                        {t}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </aside>
             </div>
           </div>
