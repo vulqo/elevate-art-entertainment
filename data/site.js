@@ -30,3 +30,8 @@ export function waLink(message = "") {
 }
 
 export const igLink = `https://instagram.com/${site.instagram}`;
+
+// Imagen de placeholder (se reemplaza por fotos/videos reales más adelante).
+export function placeholderImg(seed, w = 800, h = 600) {
+  return `https://picsum.photos/seed/elevate-${seed}/${w}/${h}?grayscale`;
+}

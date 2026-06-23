@@ -1,5 +1,6 @@
 "use client";
 import { portfolioData } from "@/data/portfolio";
+import { placeholderImg } from "@/data/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -48,8 +49,13 @@ export default function Projects() {
                     height: `${heights[i % heights.length]}px`,
                     borderRadius: "12px",
                     overflow: "hidden",
-                    background:
-                      "radial-gradient(120% 120% at 70% 15%, #20242b 0%, #15181d 55%, #0c0e11 100%)",
+                    backgroundImage: `linear-gradient(rgba(10,12,0,0.35), rgba(10,12,0,0.55)), url(${placeholderImg(
+                      `port-${elm.id}`,
+                      700,
+                      heights[i % heights.length] + 100
+                    )})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
                   }}
                 >
                   <i

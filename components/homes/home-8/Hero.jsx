@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import { waLink } from "@/data/site";
+import { waLink, placeholderImg } from "@/data/site";
 
 export default function Hero() {
   useEffect(() => {
@@ -16,8 +16,13 @@ export default function Hero() {
       className="hero-wrapper hero-8 background-image"
       id="hero"
       style={{
-        background:
-          "radial-gradient(120% 120% at 80% 10%, #20242b 0%, #15181d 45%, #0c0e11 100%)",
+        backgroundImage: `linear-gradient(rgba(10,12,0,0.78), rgba(10,12,0,0.88)), url(${placeholderImg(
+          "hero",
+          1600,
+          900
+        )})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="container">

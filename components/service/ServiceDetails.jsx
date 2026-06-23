@@ -1,7 +1,7 @@
 "use client";
 
 import { allFeatures } from "@/data/features";
-import { waLink } from "@/data/site";
+import { waLink, placeholderImg } from "@/data/site";
 
 export default function ServiceDetails({ serviceId }) {
   const serviceItem =
@@ -15,13 +15,18 @@ export default function ServiceDetails({ serviceId }) {
             <div
               className="service-inner-thumb mb-80"
               style={{
-                minHeight: "320px",
+                minHeight: "340px",
                 borderRadius: "14px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background:
-                  "radial-gradient(120% 120% at 20% 10%, #20242b 0%, #15181d 55%, #0c0e11 100%)",
+                backgroundImage: `linear-gradient(rgba(10,12,0,0.45), rgba(10,12,0,0.6)), url(${placeholderImg(
+                  `serv-${serviceItem.id}`,
+                  1400,
+                  600
+                )})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <i

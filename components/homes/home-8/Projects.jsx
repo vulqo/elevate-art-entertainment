@@ -1,4 +1,4 @@
-import { projects2 } from "@/data/portfolio";
+import { portfolioVideos } from "@/data/videos";
 import Link from "next/link";
 import React from "react";
 
@@ -15,44 +15,32 @@ export default function Projects() {
           </div>
         </div>
         <div className="row gy-4">
-          {projects2.map((elm, i) => (
+          {portfolioVideos.slice(0, 4).map((v, i) => (
             <div key={i} className="col-md-6">
-              <Link
-                scroll={false}
-                href="/project"
-                className="portfolio-thumb"
+              <div
                 style={{
                   position: "relative",
-                  display: "flex",
-                  alignItems: "flex-end",
-                  minHeight: "260px",
+                  paddingTop: "56.25%",
                   borderRadius: "12px",
                   overflow: "hidden",
-                  padding: "28px",
-                  background:
-                    "radial-gradient(120% 120% at 70% 15%, #20242b 0%, #15181d 55%, #0c0e11 100%)",
                 }}
               >
-                <i
-                  className="fas fa-play"
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                  title={v.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                   style={{
                     position: "absolute",
-                    top: "26px",
-                    right: "28px",
-                    fontSize: "26px",
-                    color: "var(--theme-color)",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
                   }}
-                ></i>
-                <div>
-                  <span
-                    className="sub-title"
-                    style={{ color: "var(--theme-color)" }}
-                  >
-                    {elm.categories.join(" · ")}
-                  </span>
-                  <h4 className="text-smoke mt-1 mb-0">{elm.title}</h4>
-                </div>
-              </Link>
+                ></iframe>
+              </div>
             </div>
           ))}
         </div>

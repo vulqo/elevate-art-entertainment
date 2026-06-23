@@ -1,4 +1,5 @@
 import { blogs3 } from "@/data/blogs";
+import { placeholderImg } from "@/data/site";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -23,23 +24,18 @@ export default function BlogList2() {
                             scroll={false}
                             href={`/blog-details/${elm.id}`}
                             style={{
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
+                              display: "block",
                               minHeight: "230px",
                               borderRadius: "10px",
-                              background:
-                                "radial-gradient(120% 120% at 30% 20%, #20242b 0%, #15181d 60%, #0c0e11 100%)",
+                              backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${placeholderImg(
+                                `blogp-${elm.id}`,
+                                700,
+                                500
+                              )})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
                             }}
-                          >
-                            <i
-                              className="fas fa-pen-nib"
-                              style={{
-                                fontSize: "40px",
-                                color: "var(--theme-color)",
-                              }}
-                            ></i>
-                          </Link>
+                          ></Link>
                         </div>
                         <div className="blog-post-content">
                           <div className="blog-post-meta">

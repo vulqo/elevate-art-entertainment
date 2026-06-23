@@ -1,5 +1,6 @@
 "use client";
 import { allPortfolio } from "@/data/portfolio";
+import { placeholderImg } from "@/data/site";
 
 export default function ProjectDetails({ portfolioId }) {
   const portfolioItem =
@@ -12,13 +13,18 @@ export default function ProjectDetails({ portfolioId }) {
         <div
           className="project-inner-thumb mb-80"
           style={{
-            minHeight: "380px",
+            minHeight: "420px",
             borderRadius: "14px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            background:
-              "radial-gradient(120% 120% at 70% 10%, #20242b 0%, #15181d 55%, #0c0e11 100%)",
+            backgroundImage: `linear-gradient(rgba(10,12,0,0.4), rgba(10,12,0,0.55)), url(${placeholderImg(
+              `proj-${portfolioItem.id}`,
+              1400,
+              700
+            )})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <i
