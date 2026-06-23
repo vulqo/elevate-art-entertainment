@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import { site, waLink } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Footer7() {
+  const { t } = useLang();
   return (
     <footer className="footer-wrapper footer-layout8 overflow-hidden bg-theme">
       <div className="container">
@@ -10,7 +13,7 @@ export default function Footer7() {
             <div className="col-md-6">
               <p>
                 {site.city} <br />
-                {site.country} · Hablamos español e inglés
+                {site.country} · {t("footer.languages")}
               </p>
             </div>
             <div className="col-md-6 align-self-center text-md-end">
@@ -42,7 +45,7 @@ export default function Footer7() {
               letterSpacing: "0.3px",
             }}
           >
-            Hecho con fuego por
+            {t("footer.credit")}
             <img
               src="/assets/img/vulqo.png"
               alt="Vulqo"

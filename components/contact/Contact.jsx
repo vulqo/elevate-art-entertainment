@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { waLink } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLang();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   function handleChange(e) {
@@ -38,11 +40,8 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-form-wrap">
               <div className="title-area mb-30">
-                <h2 className="sec-title text-smoke">¿Listo para grabar?</h2>
-                <p className="sec-text">
-                  Llena el formulario y se abrirá WhatsApp con tu mensaje listo
-                  para enviar. También puedes escribirnos directo.
-                </p>
+                <h2 className="sec-title text-smoke">{t("contact.title")}</h2>
+                <p className="sec-text">{t("contact.text")}</p>
               </div>
               <form onSubmit={handleSubmit} className="contact-form ajax-contact">
                 <div className="row">
@@ -54,7 +53,7 @@ export default function Contact() {
                         className="form-control style-border"
                         name="name"
                         id="name"
-                        placeholder="Nombre*"
+                        placeholder={`${t("form.name")}*`}
                         value={form.name}
                         onChange={handleChange}
                       />
@@ -67,7 +66,7 @@ export default function Contact() {
                         className="form-control style-border"
                         name="email"
                         id="email"
-                        placeholder="Correo (opcional)"
+                        placeholder={t("form.email")}
                         value={form.email}
                         onChange={handleChange}
                       />
@@ -78,7 +77,7 @@ export default function Contact() {
                       <textarea
                         required
                         name="message"
-                        placeholder="¿En qué te ayudamos?*"
+                        placeholder={`${t("form.message")}*`}
                         id="contactForm"
                         className="form-control style-border"
                         value={form.message}
@@ -90,8 +89,8 @@ export default function Contact() {
                 <div className="form-btn col-12">
                   <button type="submit" className="btn mt-20">
                     <span className="link-effect">
-                      <span className="effect-1">ENVIAR POR WHATSAPP</span>
-                      <span className="effect-1">ENVIAR POR WHATSAPP</span>
+                      <span className="effect-1">{t("form.send")}</span>
+                      <span className="effect-1">{t("form.send")}</span>
                     </span>
                   </button>
                 </div>

@@ -6,8 +6,11 @@ import Link from "next/link";
 import MobileNav from "./component/MobileNav";
 import MobileMenuSocials from "./component/MobileMenuSocials";
 import { site, waLink } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
+import LangToggle from "@/components/common/LangToggle";
 
 export default function Header7() {
+  const { t } = useLang();
   const [isScrolled, setIsScrolled] = useState(false);
   const [darkMenuOpen, setDarkMenuOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -95,6 +98,9 @@ export default function Header7() {
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </h6>
           </div>
+          <div className="sidebar-wrap">
+            <LangToggle />
+          </div>
           <div className="social-btn style3">
             <MobileMenuSocials />
           </div>
@@ -126,10 +132,13 @@ export default function Header7() {
                       rel="noopener noreferrer"
                     >
                       <span className="link-effect">
-                        <span className="effect-1">RESERVA TU SESIÓN</span>
-                        <span className="effect-1">RESERVA TU SESIÓN</span>
+                        <span className="effect-1">{t("header.book")}</span>
+                        <span className="effect-1">{t("header.book")}</span>
                       </span>
                     </a>
+                    <span className="d-none d-lg-inline-flex align-items-center ms-2">
+                      <LangToggle />
+                    </span>
                     <button
                       type="button"
                       className="sidebar-btn menu-toggle2 d-none d-lg-block"

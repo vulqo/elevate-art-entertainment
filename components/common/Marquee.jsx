@@ -1,32 +1,14 @@
 "use client";
 import Marquee from "react-fast-marquee";
+import { useLang } from "@/context/LanguageContext";
 
 export default function MarqueeComponent() {
+  const { t } = useLang();
   const marQueeItems = [
-    {
-      id: 1,
-      href: "/contact",
-      text: "Reserva tu sesión",
-      icon: "fas fa-star-of-life",
-    },
-    {
-      id: 2,
-      href: "/contact",
-      text: "Estudio en Downtown Cincinnati",
-      icon: "fas fa-star-of-life",
-    },
-    {
-      id: 3,
-      href: "/contact",
-      text: "Hablamos español e inglés",
-      icon: "fas fa-star-of-life",
-    },
-    {
-      id: 4,
-      href: "/contact",
-      text: "Grabación · Producción · Video",
-      icon: "fas fa-star-of-life",
-    },
+    { id: 1, href: "/contact", text: t("marquee.1"), icon: "fas fa-star-of-life" },
+    { id: 2, href: "/contact", text: t("marquee.2"), icon: "fas fa-star-of-life" },
+    { id: 3, href: "/contact", text: t("marquee.3"), icon: "fas fa-star-of-life" },
+    { id: 4, href: "/contact", text: t("marquee.4"), icon: "fas fa-star-of-life" },
   ];
   return (
     <div className="container-fluid p-0 overflow-hidden">

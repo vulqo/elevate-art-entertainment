@@ -1,10 +1,12 @@
 "use client";
+import { useLang } from "@/context/LanguageContext";
 import { menuItems } from "@/data/menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export default function MobileNav() {
+  const { t } = useLang();
   const [activeMenu, setActiveMenu] = useState([-1, -1]);
   const pathname = usePathname();
 
@@ -55,7 +57,7 @@ export default function MobileNav() {
                 }
                 className={isChildActive(elm.subMenuItems) ? "activeMenu" : ""}
               >
-                {elm.title}
+                {elm.key ? t(elm.key).toUpperCase() : elm.title}
                 <span className="mean-expand-class"></span>
               </a>
 
@@ -150,7 +152,7 @@ export default function MobileNav() {
               }
               href={elm.link}
             >
-              {elm.title}
+              {elm.key ? t(elm.key).toUpperCase() : elm.title}
             </Link>
           )}
         </li>

@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { waLink } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 // CTA: WhatsApp como acción principal (izquierda) + formulario del template (derecha).
 export default function CtaContact() {
+  const { t } = useLang();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   function handleChange(e) {
@@ -25,14 +27,11 @@ export default function CtaContact() {
         <div className="row justify-content-xl-between justify-content-center align-items-center gy-5">
           <div className="col-xl-5 col-lg-10">
             <div className="title-area mb-0">
-              <span className="sub-title">Reserva</span>
+              <span className="sub-title">{t("cta.sub")}</span>
               <h3 className="text-smoke" style={{ fontSize: "2.2rem", lineHeight: 1.2 }}>
-                ¿Listo para grabar tu próximo hit?
+                {t("cta.title")}
               </h3>
-              <p className="sec-text mt-20 mb-30">
-                La forma más rápida es por WhatsApp: te respondemos al momento y
-                agendamos tu sesión. Hablamos español e inglés.
-              </p>
+              <p className="sec-text mt-20 mb-30">{t("cta.text")}</p>
               <a
                 href={waLink("Hola, quiero reservar una sesión en el estudio.")}
                 target="_blank"
@@ -41,10 +40,12 @@ export default function CtaContact() {
               >
                 <span className="link-effect">
                   <span className="effect-1">
-                    <i className="fab fa-whatsapp me-2"></i>RESERVA POR WHATSAPP
+                    <i className="fab fa-whatsapp me-2"></i>
+                    {t("cta.button")}
                   </span>
                   <span className="effect-1">
-                    <i className="fab fa-whatsapp me-2"></i>RESERVA POR WHATSAPP
+                    <i className="fab fa-whatsapp me-2"></i>
+                    {t("cta.button")}
                   </span>
                 </span>
               </a>
@@ -52,10 +53,7 @@ export default function CtaContact() {
           </div>
           <div className="col-xl-6">
             <div className="contact-form-wrap">
-              <p className="mb-20 text-smoke">
-                ¿Prefieres dejarnos tu mensaje? Llénalo y lo enviamos por
-                WhatsApp con un clic.
-              </p>
+              <p className="mb-20 text-smoke">{t("cta.formIntro")}</p>
               <form onSubmit={handleSubmit} className="contact-form ajax-contact">
                 <div className="row">
                   <div className="col-md-6">
@@ -65,7 +63,7 @@ export default function CtaContact() {
                         type="text"
                         className="form-control style-border"
                         name="name"
-                        placeholder="Nombre*"
+                        placeholder={`${t("form.name")}*`}
                         value={form.name}
                         onChange={handleChange}
                       />
@@ -77,7 +75,7 @@ export default function CtaContact() {
                         type="text"
                         className="form-control style-border"
                         name="email"
-                        placeholder="Correo (opcional)"
+                        placeholder={t("form.email")}
                         value={form.email}
                         onChange={handleChange}
                       />
@@ -88,7 +86,7 @@ export default function CtaContact() {
                       <textarea
                         required
                         name="message"
-                        placeholder="¿En qué te ayudamos?*"
+                        placeholder={`${t("form.message")}*`}
                         className="form-control style-border style2"
                         value={form.message}
                         onChange={handleChange}
@@ -99,8 +97,8 @@ export default function CtaContact() {
                 <div className="form-btn col-12">
                   <button type="submit" className="btn mt-20">
                     <span className="link-effect">
-                      <span className="effect-1">ENVIAR POR WHATSAPP</span>
-                      <span className="effect-1">ENVIAR POR WHATSAPP</span>
+                      <span className="effect-1">{t("form.send")}</span>
+                      <span className="effect-1">{t("form.send")}</span>
                     </span>
                   </button>
                 </div>

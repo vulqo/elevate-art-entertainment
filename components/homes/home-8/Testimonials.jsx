@@ -1,8 +1,10 @@
 "use client";
 import { testimonialData2 } from "@/data/testimonials";
 import Slider from "react-slick";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Testimonials() {
+  const { t } = useLang();
   const sliderOptions = {
     slidesToShow: 2,
     arrows: false,
@@ -23,8 +25,8 @@ export default function Testimonials() {
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-8">
             <div className="title-area text-center">
-              <span className="sub-title">Testimonios</span>
-              <h2 className="sec-title text-smoke">Lo que dicen los artistas</h2>
+              <span className="sub-title">{t("testi.sub")}</span>
+              <h2 className="sec-title text-smoke">{t("testi.title")}</h2>
             </div>
           </div>
         </div>

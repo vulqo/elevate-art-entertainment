@@ -11,6 +11,7 @@ import "rc-slider/assets/index.css";
 import { Unbounded, Poppins } from "next/font/google";
 import ScrollTopBehaviour from "@/components/common/ScrollTopBehavier";
 import Context from "@/context/Context";
+import LanguageProvider from "@/context/LanguageContext";
 if (typeof window !== "undefined") {
   import("bootstrap/dist/js/bootstrap.esm").then((module) => {
     // Module is imported, you can access any exported functionality if
@@ -50,9 +51,11 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={`body  ${poppins.variable} ${unbounded.variable}`}>
         <Context>
-          <ParallaxProvider>{children}</ParallaxProvider>
-          <ScrollTop />
-          <ScrollTopBehaviour />
+          <LanguageProvider>
+            <ParallaxProvider>{children}</ParallaxProvider>
+            <ScrollTop />
+            <ScrollTopBehaviour />
+          </LanguageProvider>
         </Context>
       </body>
     </html>

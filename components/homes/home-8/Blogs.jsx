@@ -1,18 +1,21 @@
+"use client";
 import { blogs } from "@/data/blogs";
 import { placeholderImg } from "@/data/site";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Blogs() {
+  const { t } = useLang();
   return (
     <section className="blog-area space">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-7 col-xl-6 col-lg-8">
             <div className="title-area text-center">
-              <span className="sub-title">Blog</span>
-              <h2 className="sec-title text-smoke">Consejos para tu música</h2>
+              <span className="sub-title">{t("homeblog.sub")}</span>
+              <h2 className="sec-title text-smoke">{t("homeblog.title")}</h2>
             </div>
           </div>
         </div>
@@ -55,8 +58,8 @@ export default function Blogs() {
                     className="link-btn"
                   >
                     <span className="link-effect">
-                      <span className="effect-1">LEER MÁS</span>
-                      <span className="effect-1">LEER MÁS</span>
+                      <span className="effect-1">{t("homeblog.more")}</span>
+                      <span className="effect-1">{t("homeblog.more")}</span>
                     </span>
                     <Image
                       width={13}

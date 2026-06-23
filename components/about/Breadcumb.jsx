@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Breadcumb() {
+  const { t } = useLang();
   return (
     <div
       className="breadcumb-wrapper"
@@ -8,7 +11,7 @@ export default function Breadcumb() {
     >
       <div className="container">
         <div className="breadcumb-content">
-          <h1 className="breadcumb-title">Estudio</h1>
+          <h1 className="breadcumb-title">{t("studio.breadcrumb")}</h1>
         </div>
       </div>
     </div>

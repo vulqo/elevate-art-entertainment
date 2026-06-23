@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { portfolioMedia } from "@/data/portfolioMedia";
 import { site } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function WorkGallery({ limit, heading = true }) {
+  const { t } = useLang();
   const items = limit ? portfolioMedia.slice(0, limit) : portfolioMedia;
   return (
     <div className="portfolio-area-1 space">
@@ -11,12 +14,9 @@ export default function WorkGallery({ limit, heading = true }) {
           <div className="row justify-content-center">
             <div className="col-xl-8 text-center">
               <div className="title-area">
-                <span className="sub-title">Portafolio</span>
-                <h2 className="sec-title text-smoke">Trabajos recientes</h2>
-                <p className="sec-text mt-20">
-                  Videos, eventos y contenido que hemos producido. Toca
-                  cualquiera para verlo en Instagram.
-                </p>
+                <span className="sub-title">{t("work.sub")}</span>
+                <h2 className="sec-title text-smoke">{t("work.title")}</h2>
+                <p className="sec-text mt-20">{t("work.text")}</p>
               </div>
             </div>
           </div>
@@ -81,10 +81,12 @@ export default function WorkGallery({ limit, heading = true }) {
           >
             <span className="link-effect">
               <span className="effect-1">
-                <i className="fab fa-instagram me-2"></i>VER MÁS EN INSTAGRAM
+                <i className="fab fa-instagram me-2"></i>
+                {t("work.instagram")}
               </span>
               <span className="effect-1">
-                <i className="fab fa-instagram me-2"></i>VER MÁS EN INSTAGRAM
+                <i className="fab fa-instagram me-2"></i>
+                {t("work.instagram")}
               </span>
             </span>
           </a>

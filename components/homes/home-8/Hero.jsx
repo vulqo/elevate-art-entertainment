@@ -2,8 +2,10 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { waLink, placeholderImg } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLang();
   useEffect(() => {
     document.body.classList.add("bg-title");
     return () => {
@@ -34,14 +36,12 @@ export default function Hero() {
                 Elevate Art Entertainment
               </h2>
               <h1 className="hero-title wow img-custom-anim-left animated text-smoke">
-                Estudio de grabación en Cincinnati
+                {t("hero.title")}
               </h1>
             </div>
             <div className="col-xl-4 col-lg-5 offset-xl-8 offset-lg-7">
               <p className="hero-text wow img-custom-anim-right animated text-smoke">
-                Grabación, producción musical y contenido visual en Downtown
-                Cincinnati. De la grabación al videoclip, todo en un solo lugar.
-                Hablamos español e inglés. Entregas rápidas.
+                {t("hero.text")}
               </p>
               <Link
                 scroll={false}
@@ -51,8 +51,8 @@ export default function Hero() {
                 className="btn style2 mt-40 wow img-custom-anim-right animated"
               >
                 <span className="link-effect">
-                  <span className="effect-1">RESERVA TU SESIÓN</span>
-                  <span className="effect-1">RESERVA TU SESIÓN</span>
+                  <span className="effect-1">{t("header.book")}</span>
+                  <span className="effect-1">{t("header.book")}</span>
                 </span>
               </Link>
             </div>

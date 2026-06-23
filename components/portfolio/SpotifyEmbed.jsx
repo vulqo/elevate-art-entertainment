@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useLang } from "@/context/LanguageContext";
 
 // Reproductor de Spotify. PENDIENTE: reemplazar el ID por la playlist o el
 // perfil de artista reales del cliente. Hoy usa una playlist de ejemplo.
@@ -6,18 +8,16 @@ const SPOTIFY_EMBED =
   "https://open.spotify.com/embed/playlist/37i9dQZF1DX10zKzsJ2jva?utm_source=generator&theme=0";
 
 export default function SpotifyEmbed() {
+  const { t } = useLang();
   return (
     <div className="space-bottom">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-8 text-center">
             <div className="title-area">
-              <span className="sub-title">Escúchanos</span>
-              <h2 className="sec-title text-smoke">Música en Spotify</h2>
-              <p className="sec-text mt-20">
-                Producciones del estudio. (Playlist de ejemplo: la cambiamos por
-                la tuya cuando publiques.)
-              </p>
+              <span className="sub-title">{t("spotify.sub")}</span>
+              <h2 className="sec-title text-smoke">{t("spotify.title")}</h2>
+              <p className="sec-text mt-20">{t("spotify.text")}</p>
             </div>
           </div>
         </div>

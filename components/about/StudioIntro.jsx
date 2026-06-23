@@ -1,34 +1,25 @@
+"use client";
 import React from "react";
 import { waLink } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function StudioIntro() {
+  const { t } = useLang();
   return (
     <div className="about-area space">
       <div className="container">
         <div className="row gy-4 align-items-center">
           <div className="col-lg-7">
             <div className="title-area mb-0">
-              <span className="sub-title">Renta del estudio</span>
-              <h2 className="sec-title text-smoke">
-                Renta nuestro estudio en Downtown Cincinnati
-              </h2>
-              <p className="sec-text mt-20">
-                Renta el estudio por hora para tus ensayos de presentaciones,
-                sesiones de fotos o producción de contenido. Un espacio
-                profesional con tratamiento acústico, en el corazón de Downtown
-                Cincinnati, Ohio.
-              </p>
-              <p className="sec-text mt-15">
-                Somos un estudio de grabación, producción musical y contenido
-                visual. Atención bilingüe: hablamos español e inglés, con
-                entregas rápidas. Ideal para artistas, creadores de contenido y
-                proyectos de música en Cincinnati y todo Ohio.
-              </p>
+              <span className="sub-title">{t("studio.sub")}</span>
+              <h2 className="sec-title text-smoke">{t("studio.title")}</h2>
+              <p className="sec-text mt-20">{t("studio.p1")}</p>
+              <p className="sec-text mt-15">{t("studio.p2")}</p>
               <ul className="about-list mt-20">
-                <li>Ensayos para presentaciones</li>
-                <li>Sesiones de fotos y video</li>
-                <li>Producción de contenido</li>
-                <li>Grabación y producción musical</li>
+                <li>{t("studio.li1")}</li>
+                <li>{t("studio.li2")}</li>
+                <li>{t("studio.li3")}</li>
+                <li>{t("studio.li4")}</li>
               </ul>
               <a
                 href={waLink("Hola, quiero rentar el estudio por hora.")}
@@ -37,8 +28,8 @@ export default function StudioIntro() {
                 className="btn style2 mt-30"
               >
                 <span className="link-effect">
-                  <span className="effect-1">CONSULTA DISPONIBILIDAD</span>
-                  <span className="effect-1">CONSULTA DISPONIBILIDAD</span>
+                  <span className="effect-1">{t("studio.cta")}</span>
+                  <span className="effect-1">{t("studio.cta")}</span>
                 </span>
               </a>
             </div>

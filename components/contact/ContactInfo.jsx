@@ -1,8 +1,12 @@
+"use client";
 import { contactInfo2 } from "@/data/contactInfo";
 import Image from "next/image";
 import React from "react";
+import { useLang } from "@/context/LanguageContext";
 
 export default function ContactInfo() {
+  const { lang } = useLang();
+  const f = (o, k) => (lang === "en" ? o[`${k}_en`] || o[k] : o[k]);
   return (
     <div className="feature-area-1 space">
       <div className="container">
@@ -15,7 +19,7 @@ export default function ContactInfo() {
                 </div>
                 <div className="feature-card-details">
                   <h4 className="feature-card-title">
-                    <a href="#">{info.title}</a>
+                    <a href="#">{f(info, "title")}</a>
                   </h4>
                   {info.address && (
                     <p className="feature-card-text mb-0">{info.address}</p>
@@ -27,7 +31,7 @@ export default function ContactInfo() {
                     <p className="feature-card-text mb-0">{info.email}</p>
                   )}
                   {info.email2 && (
-                    <p className="feature-card-text">{info.email2}</p>
+                    <p className="feature-card-text">{f(info, "email2")}</p>
                   )}
                   {info.phoneNumber1 && (
                     <p className="feature-card-text mb-0">
@@ -35,12 +39,12 @@ export default function ContactInfo() {
                     </p>
                   )}
                   {info.phoneNumber2 && (
-                    <p className="feature-card-text">{info.phoneNumber2}</p>
+                    <p className="feature-card-text">{f(info, "phoneNumber2")}</p>
                   )}
                   <a href={info.linkUrl} className="link-btn">
                     <span className="link-effect">
-                      <span className="effect-1">{info.linkText}</span>
-                      <span className="effect-1">{info.linkText}</span>
+                      <span className="effect-1">{f(info, "linkText")}</span>
+                      <span className="effect-1">{f(info, "linkText")}</span>
                     </span>
                     <Image
                       width={13}

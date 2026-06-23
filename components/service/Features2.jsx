@@ -1,8 +1,11 @@
-import { featureData4 } from "@/data/features";
+"use client";
+import { featureData4, tField } from "@/data/features";
 import Image from "next/image";
 import React from "react";
+import { useLang } from "@/context/LanguageContext";
 
 export default function Features2() {
+  const { t, lang } = useLang();
   return (
     <div className="feature-area-1 space">
       <div className="container">
@@ -17,9 +20,11 @@ export default function Features2() {
                   ></i>
                 </div>
                 <h4 className="feature-card-title">
-                  <a href={`/service-details/${elm.id}`}>{elm.title}</a>
+                  <a href={`/service-details/${elm.id}`}>
+                    {tField(elm, "title", lang)}
+                  </a>
                 </h4>
-                <p className="feature-card-text">{elm.text}</p>
+                <p className="feature-card-text">{tField(elm, "text", lang)}</p>
                 <p
                   className="feature-card-text"
                   style={{ fontWeight: 700, color: "var(--theme-color)" }}
@@ -28,8 +33,8 @@ export default function Features2() {
                 </p>
                 <a href={`/service-details/${elm.id}`} className="link-btn">
                   <span className="link-effect">
-                    <span className="effect-1">VER DETALLE</span>
-                    <span className="effect-1">VER DETALLE</span>
+                    <span className="effect-1">{t("service.viewDetail")}</span>
+                    <span className="effect-1">{t("service.viewDetail")}</span>
                   </span>
                   <Image
                     width={13}

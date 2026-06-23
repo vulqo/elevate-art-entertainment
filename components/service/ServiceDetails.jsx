@@ -1,11 +1,14 @@
 "use client";
 
-import { allFeatures } from "@/data/features";
+import { allFeatures, tField } from "@/data/features";
 import { waLink, placeholderImg } from "@/data/site";
+import { useLang } from "@/context/LanguageContext";
 
 export default function ServiceDetails({ serviceId }) {
+  const { t, lang } = useLang();
   const serviceItem =
     allFeatures.filter((elm) => elm.id == serviceId)[0] || allFeatures[0];
+  const title = tField(serviceItem, "title", lang);
 
   return (
     <div className="service-details-page-area space">
@@ -38,34 +41,30 @@ export default function ServiceDetails({ serviceId }) {
           </div>
           <div className="col-xl-8">
             <div className="title-area mb-20">
-              <span className="sub-title">Servicio</span>
-              <h2 className="sec-title text-smoke">{serviceItem.title}</h2>
+              <span className="sub-title">{t("sd.sub")}</span>
+              <h2 className="sec-title text-smoke">{title}</h2>
               <h4 style={{ color: "var(--theme-color)" }}>
                 {serviceItem.price}
               </h4>
-              <p className="sec-text mt-30">{serviceItem.text}</p>
-              <p className="sec-text mt-20">
-                (Contenido de ejemplo) Aquí va la descripción completa de este
-                servicio: qué incluye, cómo es el proceso y qué recibes al
-                final. Lo definimos con el contenido real más adelante.
-              </p>
+              <p className="sec-text mt-30">{tField(serviceItem, "text", lang)}</p>
+              <p className="sec-text mt-20">{t("sd.placeholder")}</p>
             </div>
-            <h3 className="text-smoke">¿Qué incluye?</h3>
+            <h3 className="text-smoke">{t("sd.includes")}</h3>
             <ul className="about-list mt-20">
-              <li>Atención bilingüe (español e inglés)</li>
-              <li>Trabajo profesional en Downtown Cincinnati</li>
-              <li>Entregas rápidas</li>
-              <li>Acompañamiento en todo el proceso</li>
+              <li>{t("sd.inc1")}</li>
+              <li>{t("sd.inc2")}</li>
+              <li>{t("sd.inc3")}</li>
+              <li>{t("sd.inc4")}</li>
             </ul>
             <a
-              href={waLink(`Hola, quiero información sobre: ${serviceItem.title}.`)}
+              href={waLink(`Hola, quiero información sobre: ${title}.`)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn style2 mt-30"
             >
               <span className="link-effect">
-                <span className="effect-1">RESERVAR POR WHATSAPP</span>
-                <span className="effect-1">RESERVAR POR WHATSAPP</span>
+                <span className="effect-1">{t("sd.reservaWa")}</span>
+                <span className="effect-1">{t("sd.reservaWa")}</span>
               </span>
             </a>
           </div>
