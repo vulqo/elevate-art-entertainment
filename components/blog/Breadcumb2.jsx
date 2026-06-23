@@ -1,15 +1,18 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Breadcumb2() {
+export default function Breadcumb2({ title = "Artículo" }) {
   return (
-    <div className="breadcumb-wrapper style2 bg-smoke">
+    <div
+      className="breadcumb-wrapper style2"
+      style={{ background: "linear-gradient(135deg, #15181d 0%, #20242b 55%, #2b313a 100%)" }}
+    >
       <div className="container-fluid">
         <div className="breadcumb-content">
           <ul className="breadcumb-menu">
             <li>
               <Link scroll={false} href="/">
-                Home
+                Inicio
               </Link>
             </li>
             <li>
@@ -17,7 +20,7 @@ export default function Breadcumb2() {
                 Blog
               </Link>
             </li>
-            <li>Everything You Should Know About Return</li>
+            <li>{title}</li>
           </ul>
         </div>
       </div>

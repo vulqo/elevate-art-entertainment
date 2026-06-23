@@ -1,6 +1,5 @@
 "use client";
 import { testimonialData2 } from "@/data/testimonials";
-import Image from "next/image";
 import Slider from "react-slick";
 
 export default function Testimonials() {
@@ -37,12 +36,10 @@ export default function Testimonials() {
             <div key={i} className="col-lg-6 sliderItem2">
               <div className="testi-box style3">
                 <div className="quote-icon">
-                  <Image
-                    width={52}
-                    height={32}
-                    src="/assets/img/icon/quote.svg"
-                    alt="icon"
-                  />
+                  <i
+                    className="fas fa-quote-left"
+                    style={{ fontSize: "40px", color: "var(--brand)" }}
+                  ></i>
                 </div>
                 <p className="testi-box_text">“{elm.text}”</p>
                 <div className="testi-box_profile">

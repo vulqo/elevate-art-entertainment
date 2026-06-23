@@ -31,7 +31,7 @@ export default function BlogList2() {
                                 `blogp-${elm.id}`,
                                 700,
                                 500,
-                                "music,studio,microphone"
+                                elm.theme
                               )})`,
                               backgroundSize: "cover",
                               backgroundPosition: "center",
@@ -52,6 +52,7 @@ export default function BlogList2() {
                               {elm.title}
                             </Link>
                           </h4>
+                          <p className="sec-text">{elm.excerpt}</p>
                           <Link
                             scroll={false}
                             href={`/blog-details/${elm.id}`}

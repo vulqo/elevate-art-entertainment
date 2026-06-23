@@ -32,7 +32,7 @@ export default function Blogs() {
                         `blog-${elm.id}`,
                         600,
                         400,
-                        "music,studio,microphone"
+                        elm.theme
                       )})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
