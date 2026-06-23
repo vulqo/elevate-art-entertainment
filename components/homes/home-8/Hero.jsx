@@ -1,0 +1,58 @@
+"use client";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import { waLink } from "@/data/site";
+
+export default function Hero() {
+  useEffect(() => {
+    document.body.classList.add("bg-title");
+    return () => {
+      document.body.classList.remove("bg-title");
+    };
+  }, []);
+
+  return (
+    <div
+      className="hero-wrapper hero-8 background-image"
+      id="hero"
+      style={{
+        background:
+          "radial-gradient(120% 120% at 80% 10%, #20242b 0%, #15181d 45%, #0c0e11 100%)",
+      }}
+    >
+      <div className="container">
+        <div className="hero-style8">
+          <div className="row">
+            <div className="col-lg-8">
+              <h2 className="hero-subtitle wow img-custom-anim-left animated text-smoke">
+                Elevate Art Entertainment
+              </h2>
+              <h1 className="hero-title wow img-custom-anim-left animated text-smoke">
+                Estudio de grabación en Cincinnati
+              </h1>
+            </div>
+            <div className="col-xl-4 col-lg-5 offset-xl-8 offset-lg-7">
+              <p className="hero-text wow img-custom-anim-right animated text-smoke">
+                Grabación, producción musical y contenido visual en Downtown
+                Cincinnati. De la grabación al videoclip, todo en un solo lugar.
+                Hablamos español e inglés.
+              </p>
+              <Link
+                scroll={false}
+                href={waLink("Hola, quiero reservar una sesión en el estudio.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn style2 mt-40 wow img-custom-anim-right animated"
+              >
+                <span className="link-effect">
+                  <span className="effect-1">RESERVA TU SESIÓN</span>
+                  <span className="effect-1">RESERVA TU SESIÓN</span>
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://elevate-art-entertainment-vulqollc.vercel.app/sitemap.xml
