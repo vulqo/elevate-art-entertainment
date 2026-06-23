@@ -150,49 +150,50 @@ export const posts = [
   },
 
   {
-    id: "video-boda-eventos-cincinnati",
-    title: "Video de boda en Cincinnati: qué incluye y cómo elegir",
-    category: "Eventos",
+    id: "distribuir-musica-spotify-apple-music-cincinnati",
+    title:
+      "Cómo distribuir tu música en Spotify y Apple Music desde Cincinnati",
+    category: "Distribución",
     date: "25 de mayo, 2026",
-    theme: "wedding,event,videography",
+    theme: "music-streaming,spotify,headphones",
     excerpt:
-      "Qué debe incluir un buen video de boda o evento en Cincinnati y cómo elegir al equipo que va a capturar tu día.",
+      "Qué es la distribución digital, cómo subir tu canción a Spotify y Apple Music y por qué conviene hacerlo bien desde el inicio.",
     metaDescription:
-      "Video de boda y eventos en Cincinnati: qué incluye un buen servicio, qué preguntar antes de contratar y cómo asegurar recuerdos profesionales. Pide tu cotización.",
+      "Distribución digital en Cincinnati: cómo subir tu música a Spotify, Apple Music y demás plataformas, qué necesitas y cuánto cuesta. $15 por canción.",
     intro:
-      "Tu boda o tu evento pasa una sola vez. Un buen video es lo que te deja revivirlo años después. Si buscas video de boda en Cincinnati, esto es lo que conviene saber antes de elegir.",
+      "Grabaste tu canción, ya está mezclada y masterizada… ¿y ahora? El siguiente paso es la distribución digital: subirla a Spotify, Apple Music y todas las plataformas para que el mundo la escuche. Te explicamos cómo funciona.",
     sections: [
       {
-        heading: "Qué incluye un buen video de evento",
+        heading: "Qué es la distribución digital",
         paragraphs: [
-          "No es solo grabar y entregar. Un buen servicio cubre los momentos clave, tiene buen audio y entrega un video editado con ritmo y emoción.",
+          "Es el proceso de publicar tu música en las plataformas de streaming. No subes la canción directo a Spotify: lo haces a través de un distribuidor que la envía a todas las tiendas a la vez y se encarga de que cobres tus regalías.",
+        ],
+      },
+      {
+        heading: "Qué necesitas para publicar",
+        paragraphs: [
+          "Antes de distribuir conviene tener todo listo para que tu lanzamiento se vea profesional.",
         ],
         list: [
-          "Cobertura de los momentos importantes",
-          "Buen audio (votos, discursos, música)",
-          "Cámaras profesionales y estabilización",
-          "Edición con un video resumen para compartir",
+          "La canción final (mezcla y máster listos)",
+          "La portada en buena resolución",
+          "Título, créditos y nombre artístico definidos",
+          "Una fecha de lanzamiento",
         ],
       },
       {
-        heading: "Qué preguntar antes de contratar",
+        heading: "Cuánto cuesta y cómo lo hacemos",
         paragraphs: [
-          "Pregunta por ejemplos de trabajos anteriores, cuántas horas de cobertura incluye, en cuánto tiempo entregan y qué formatos recibes. Aclarar todo desde el inicio evita sorpresas.",
-        ],
-      },
-      {
-        heading: "Por qué grabar en Cincinnati con nosotros",
-        paragraphs: [
-          "Conocemos las locaciones de la ciudad, trabajamos en español e inglés y cuidamos cada detalle para que tus recuerdos se vean profesionales. El precio se cotiza según el tipo y la duración del evento.",
+          "Nosotros distribuimos tu música por $15 por canción. Nos encargamos del proceso completo para que tu tema aparezca en Spotify, Apple Music y demás plataformas, sin que tengas que pelearte con la parte técnica.",
         ],
       },
     ],
     cta: {
-      title: "Captura tu evento como se merece",
-      text: "Cuéntanos la fecha y el lugar y te enviamos una cotización a tu medida.",
-      button: "COTIZA TU VIDEO DE BODA",
+      title: "Lleva tu música a todas las plataformas",
+      text: "Te ayudamos a publicar tu canción en Spotify, Apple Music y más. Escríbenos y empezamos.",
+      button: "DISTRIBUYE TU CANCIÓN",
       message:
-        "Hola, quiero una cotización para video de boda/evento en Cincinnati.",
+        "Hola, quiero distribuir mi música en Spotify y Apple Music.",
     },
   },
 
@@ -244,49 +245,48 @@ export const posts = [
   },
 
   {
-    id: "campamento-artistas-cincinnati",
-    title: "Campamento de artistas en Cincinnati: de la idea al lanzamiento",
-    category: "Artistas",
+    id: "beats-con-licencia-elegir-beat-cincinnati",
+    title: "Beats con licencia: cómo elegir el beat correcto para tu canción",
+    category: "Beats",
     date: "11 de mayo, 2026",
-    theme: "music-artist,studio,songwriting",
+    theme: "music-production,beats,studio",
     excerpt:
-      "Un programa intensivo para llevar tu música al siguiente nivel: grabación, producción, imagen y estrategia, todo en Cincinnati.",
+      "Qué es un beat con licencia, cómo elegir el que va con tu estilo y por qué importa tener la licencia en orden antes de publicar.",
     metaDescription:
-      "Campamento de artistas en Cincinnati: un programa para pasar de la idea al lanzamiento, con grabación, producción, imagen y distribución. Reserva tu cupo.",
+      "Beats con licencia en Cincinnati: qué es la licencia de uso, cómo elegir el beat para tu canción y por qué te conviene tenerla en orden. Desde $90.",
     intro:
-      "¿Tienes el talento pero no sabes por dónde empezar? Un campamento de artistas te da todo lo que necesitas para pasar de la idea a un lanzamiento real, acompañado por un equipo que ya recorrió el camino.",
+      "El beat es la base de tu canción: marca el ritmo, la energía y el estilo. Elegir bien (y con la licencia en orden) puede ser la diferencia entre un tema que despega y uno con problemas para publicarse.",
     sections: [
       {
-        heading: "Qué incluye el programa",
+        heading: "Qué es un beat con licencia",
         paragraphs: [
-          "La idea es trabajar tu proyecto de forma completa, no por partes sueltas.",
+          "Una licencia de uso es el permiso legal para usar un beat en tu canción. Sin ella, podrías tener problemas para subir tu tema a las plataformas o monetizarlo. Por eso entregamos cada beat con su licencia clara desde el inicio.",
+        ],
+      },
+      {
+        heading: "Cómo elegir el beat correcto",
+        paragraphs: [
+          "No se trata solo de que 'pegue'. Piensa en lo que quieres transmitir y en dónde va a sonar tu canción.",
         ],
         list: [
-          "Grabación y producción de tu canción",
-          "Dirección creativa e imagen de artista",
-          "Sesión de fotos y contenido para redes",
-          "Distribución en Spotify, Apple Music y más",
+          "Que vaya con tu estilo y tu voz",
+          "Que tenga la energía correcta para el tema",
+          "Que la calidad del audio sea profesional",
+          "Que la licencia te permita publicar y monetizar",
         ],
       },
       {
-        heading: "Para quién es",
+        heading: "Beats hechos para ti",
         paragraphs: [
-          "Para artistas que están empezando y quieren hacerlo bien desde el inicio, y también para quienes ya tienen música pero quieren subir el nivel de producción y presencia.",
-        ],
-      },
-      {
-        heading: "Por qué en Cincinnati",
-        paragraphs: [
-          "Porque tienes estudio, locaciones y equipo en un mismo lugar, con atención en español e inglés. Te acompañamos en cada paso para que tu lanzamiento salga sólido.",
+          "Hacemos beats únicos con licencia de uso desde $90, pensados para tu proyecto. Y si quieres, te acompañamos con la grabación, la mezcla y el máster para dejar la canción terminada.",
         ],
       },
     ],
     cta: {
-      title: "Lleva tu carrera al siguiente nivel",
-      text: "Cupos limitados. Escríbenos y te contamos cómo unirte al próximo campamento.",
-      button: "RESERVA TU CUPO",
-      message:
-        "Hola, quiero información sobre el campamento de artistas en Cincinnati.",
+      title: "Consigue el beat perfecto para tu canción",
+      text: "Cuéntanos qué estilo buscas y te ayudamos a encontrar (o crear) tu beat.",
+      button: "CONSIGUE TU BEAT",
+      message: "Hola, quiero información sobre beats con licencia.",
     },
   },
 ];

@@ -41,7 +41,7 @@ export default function Hero() {
               <p className="hero-text wow img-custom-anim-right animated text-smoke">
                 Grabación, producción musical y contenido visual en Downtown
                 Cincinnati. De la grabación al videoclip, todo en un solo lugar.
-                Hablamos español e inglés.
+                Hablamos español e inglés. Entregas rápidas.
               </p>
               <Link
                 scroll={false}
