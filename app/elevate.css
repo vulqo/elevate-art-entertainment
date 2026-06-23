@@ -4,7 +4,12 @@
    Todo el sitio (botones, iconos, precios, marquee, footer) lo usa.
    ===================================================================== */
 :root {
-  --brand: #e3ff04;
+  /* Paleta de marca del cliente — cambia aquí para todo el sitio */
+  --brand: #12a4db; /* azul principal (resaltado) */
+  --brand-mid: #0387db; /* azul medio */
+  --brand-deep: #0037c8; /* azul profundo */
+  --cream: #fff9f8; /* casi blanco */
+
   --theme-color: var(--brand);
   --yellow-color: var(--brand);
 }
