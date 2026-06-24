@@ -30,11 +30,27 @@ export function waLink(message = "") {
 
 export const igLink = `https://instagram.com/${site.instagram}`;
 
-// Imagen de placeholder TEMÁTICA (estudio / música), se reemplaza por
-// fotos/videos reales más adelante. Usa LoremFlickr (fotos reales por tema).
-export function placeholderImg(seed, w = 800, h = 600, theme = "recording,studio,music") {
+// Imágenes de placeholder REALES (del trabajo del cliente en su IG).
+// Se reemplazan por fotos definitivas más adelante. Relevantes y propias.
+const PLACEHOLDER_IMAGES = [
+  "/assets/img/portfolio/ig/work-1.jpg",
+  "/assets/img/portfolio/ig/work-2.jpg",
+  "/assets/img/portfolio/ig/work-3.jpg",
+  "/assets/img/portfolio/ig/work-4.jpg",
+  "/assets/img/portfolio/ig/work-5.jpg",
+  "/assets/img/portfolio/ig/work-6.jpg",
+  "/assets/img/portfolio/ig/work-7.jpg",
+  "/assets/img/portfolio/ig/work-8.jpg",
+  "/assets/img/portfolio/ig/work-9.jpg",
+  "/assets/img/portfolio/ig/work-11.jpg",
+  "/assets/img/portfolio/ig/work-12.jpg",
+];
+// Elige una imagen real de forma determinista según el "seed".
+export function placeholderImg(seed) {
   const str = String(seed);
-  let lock = 0;
-  for (let i = 0; i < str.length; i++) lock = (lock + str.charCodeAt(i) * (i + 7)) % 100000;
-  return `https://loremflickr.com/${w}/${h}/${theme}?lock=${lock + 1}`;
+  let n = 0;
+  for (let i = 0; i < str.length; i++) {
+    n = (n + str.charCodeAt(i) * (i + 7)) % PLACEHOLDER_IMAGES.length;
+  }
+  return PLACEHOLDER_IMAGES[n];
 }
