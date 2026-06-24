@@ -87,7 +87,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="form-btn col-12">
-                  <button type="submit" className="btn mt-20">
+                  <button type="submit" className="btn style2 mt-20">
                     <span className="link-effect">
                       <span className="effect-1">{t("form.send")}</span>
                       <span className="effect-1">{t("form.send")}</span>

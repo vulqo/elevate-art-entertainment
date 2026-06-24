@@ -3,7 +3,7 @@ import Footer7 from "@/components/footers/Footer7";
 import Header7 from "@/components/headers/Header7";
 import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
-import Breadcumb from "@/components/portfolio/Breadcumb";
+import PageBanner from "@/components/common/PageBanner";
 import WorkGallery from "@/components/portfolio/WorkGallery";
 import SpotifyEmbed from "@/components/portfolio/SpotifyEmbed";
 import { buildMeta } from "@/data/seo";
@@ -21,7 +21,7 @@ export default function ProjectPage() {
     <>
       <DarkBody />
       <Header7 />
-      <Breadcumb />
+      <PageBanner titleKey="portfolio.breadcrumb" textKey="portfolio.bannerText" path="/project" />
       <WorkGallery />
       <SpotifyEmbed />
       <CtaContact />

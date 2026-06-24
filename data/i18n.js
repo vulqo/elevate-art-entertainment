@@ -14,7 +14,7 @@ export const dict = {
     // Header / chrome
     "header.book": "Reserva tu sesión",
     "footer.languages": "Hablamos español e inglés",
-    "footer.credit": "Hecho con fuego por",
+    "footer.credit": "Diseñado por",
     "lang.toggle": "EN",
     // Marquee
     "marquee.1": "Reserva tu sesión",
@@ -96,6 +96,15 @@ export const dict = {
     // Portfolio / blog breadcrumbs
     "portfolio.breadcrumb": "Portafolio",
     "blog.breadcrumb": "Blog",
+    // Texto de banner por página (SEO)
+    "service.bannerText": "Precios claros para grabación, beats, producción, video y más, en Downtown Cincinnati.",
+    "portfolio.bannerText": "Videos, sesiones y producciones reales del estudio en Cincinnati.",
+    "studio.bannerText": "Renta nuestro estudio por hora en Downtown Cincinnati: ensayos, fotos y contenido.",
+    "blog.bannerText": "Consejos de grabación, producción y video para artistas en Cincinnati.",
+    "contact.bannerText": "Reserva tu sesión por WhatsApp. Hablamos español e inglés, en Downtown Cincinnati.",
+    // FAQ
+    "faq.sub": "Preguntas frecuentes",
+    "faq.title": "Lo que más nos preguntan",
   },
 
   en: {
@@ -109,7 +118,7 @@ export const dict = {
     // Header / chrome
     "header.book": "Book your session",
     "footer.languages": "We speak Spanish & English",
-    "footer.credit": "Forged with fire by",
+    "footer.credit": "Designed by",
     "lang.toggle": "ES",
     // Marquee
     "marquee.1": "Book your session",
@@ -191,5 +200,14 @@ export const dict = {
     // Portfolio / blog breadcrumbs
     "portfolio.breadcrumb": "Portfolio",
     "blog.breadcrumb": "Blog",
+    // Texto de banner por página (SEO)
+    "service.bannerText": "Clear pricing for recording, beats, production, video and more in Downtown Cincinnati.",
+    "portfolio.bannerText": "Real videos, sessions and productions from the studio in Cincinnati.",
+    "studio.bannerText": "Rent our studio by the hour in Downtown Cincinnati: rehearsals, photos and content.",
+    "blog.bannerText": "Recording, production and video tips for artists in Cincinnati.",
+    "contact.bannerText": "Book your session on WhatsApp. We speak Spanish & English, in Downtown Cincinnati.",
+    // FAQ
+    "faq.sub": "FAQ",
+    "faq.title": "What clients ask us most",
   },
 };

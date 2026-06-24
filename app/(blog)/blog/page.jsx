@@ -1,5 +1,5 @@
 import BlogList2 from "@/components/blog/BlogList2";
-import Breadcumb from "@/components/blog/Breadcumb";
+import PageBanner from "@/components/common/PageBanner";
 import MarqueeComponent from "@/components/common/Marquee";
 import Footer7 from "@/components/footers/Footer7";
 import Header7 from "@/components/headers/Header7";
@@ -19,7 +19,7 @@ export default function BlogPage() {
     <>
       <DarkBody />
       <Header7 />
-      <Breadcumb />
+      <PageBanner titleKey="blog.breadcrumb" textKey="blog.bannerText" path="/blog" />
       <BlogList2 />
       <MarqueeComponent />
       <Footer7 />

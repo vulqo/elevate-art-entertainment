@@ -1,4 +1,4 @@
-import Breadcumb from "@/components/about/Breadcumb";
+import PageBanner from "@/components/common/PageBanner";
 import StudioIntro from "@/components/about/StudioIntro";
 import MarqueeComponent from "@/components/common/Marquee";
 import LocalBusinessSchema from "@/components/common/LocalBusinessSchema";
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <DarkBody />
       <LocalBusinessSchema />
       <Header7 />
-      <Breadcumb />
+      <PageBanner titleKey="studio.breadcrumb" textKey="studio.bannerText" path="/about" />
       <StudioIntro />
       <MarqueeComponent />
       <Footer7 />

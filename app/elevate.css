@@ -12,6 +12,13 @@
 
   --theme-color: var(--brand);
   --yellow-color: var(--brand);
+  --success-color: var(--brand); /* menú activo en color de marca, no verde */
+}
+
+/* Ítem de menú activo: color de marca (antes salía verde) */
+.activeMenu,
+.activeMenu2 {
+  color: var(--brand) !important;
 }
 
 /* Marquee: quitar el morado del template y usar el color de marca */

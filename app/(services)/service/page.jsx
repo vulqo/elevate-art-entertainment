@@ -3,9 +3,10 @@ import Footer7 from "@/components/footers/Footer7";
 import Header7 from "@/components/headers/Header7";
 import DarkBody from "@/components/common/DarkBody";
 import CtaContact from "@/components/common/CtaContact";
-import Breadcumb from "@/components/service/Breadcumb";
+import PageBanner from "@/components/common/PageBanner";
 import Features2 from "@/components/service/Features2";
 import ServiceNotes from "@/components/service/ServiceNotes";
+import Faq from "@/components/common/Faq";
 import { buildMeta } from "@/data/seo";
 import { featureData4 } from "@/data/features";
 import { site } from "@/data/site";
@@ -42,9 +43,10 @@ export default function ServicePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Header7 />
-      <Breadcumb />
+      <PageBanner titleKey="service.breadcrumb" textKey="service.bannerText" path="/service" />
       <Features2 />
       <ServiceNotes />
+      <Faq />
       <CtaContact />
       <MarqueeComponent />
       <Footer7 />

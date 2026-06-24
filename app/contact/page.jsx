@@ -1,5 +1,5 @@
 import MarqueeComponent from "@/components/common/Marquee";
-import Breadcumb from "@/components/contact/Breadcumb";
+import PageBanner from "@/components/common/PageBanner";
 import Contact from "@/components/contact/Contact";
 import ContactInfo from "@/components/contact/ContactInfo";
 import Footer7 from "@/components/footers/Footer7";
@@ -20,7 +20,7 @@ export default function ContactPage() {
     <>
       <DarkBody />
       <Header7 />
-      <Breadcumb />
+      <PageBanner titleKey="contact.breadcrumb" textKey="contact.bannerText" path="/contact" />
       <ContactInfo />
       <Contact />
       <MarqueeComponent />
