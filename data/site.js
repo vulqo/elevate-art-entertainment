@@ -30,20 +30,18 @@ export function waLink(message = "") {
 
 export const igLink = `https://instagram.com/${site.instagram}`;
 
-// Imágenes de placeholder REALES (del trabajo del cliente en su IG).
-// Se reemplazan por fotos definitivas más adelante. Relevantes y propias.
+// Imágenes de placeholder TEMÁTICAS de estudio/música (licencia abierta,
+// vía Openverse). Relevantes y de buena calidad; se reemplazan por fotos
+// definitivas del cliente más adelante.
 const PLACEHOLDER_IMAGES = [
-  "/assets/img/portfolio/ig/work-1.jpg",
-  "/assets/img/portfolio/ig/work-2.jpg",
-  "/assets/img/portfolio/ig/work-3.jpg",
-  "/assets/img/portfolio/ig/work-4.jpg",
-  "/assets/img/portfolio/ig/work-5.jpg",
-  "/assets/img/portfolio/ig/work-6.jpg",
-  "/assets/img/portfolio/ig/work-7.jpg",
-  "/assets/img/portfolio/ig/work-8.jpg",
-  "/assets/img/portfolio/ig/work-9.jpg",
-  "/assets/img/portfolio/ig/work-11.jpg",
-  "/assets/img/portfolio/ig/work-12.jpg",
+  "/assets/img/photos/console.jpg",
+  "/assets/img/photos/studio1.jpg",
+  "/assets/img/photos/mic.jpg",
+  "/assets/img/photos/studio2.jpg",
+  "/assets/img/photos/headphones.jpg",
+  "/assets/img/photos/video.jpg",
+  "/assets/img/photos/photo.jpg",
+  "/assets/img/photos/concert.jpg",
 ];
 // Elige una imagen real de forma determinista según el "seed".
 export function placeholderImg(seed) {

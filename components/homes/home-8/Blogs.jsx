@@ -31,12 +31,7 @@ export default function Blogs() {
                       display: "block",
                       minHeight: "240px",
                       borderRadius: "10px",
-                      backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${placeholderImg(
-                        `blog-${elm.id}`,
-                        600,
-                        400,
-                        elm.theme
-                      )})`,
+                      backgroundImage: `linear-gradient(rgba(10,12,0,0.25), rgba(10,12,0,0.45)), url(${elm.img})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}

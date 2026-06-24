@@ -17,12 +17,7 @@ export default function BlogDetails({ blogId }) {
               style={{
                 minHeight: "360px",
                 borderRadius: "14px",
-                backgroundImage: `linear-gradient(rgba(10,12,0,0.35), rgba(10,12,0,0.5)), url(${placeholderImg(
-                  `blogd-${post.id}`,
-                  1200,
-                  600,
-                  post.theme
-                )})`,
+                backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${post.img})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

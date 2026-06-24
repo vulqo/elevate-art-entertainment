@@ -18,12 +18,8 @@ export default function Hero() {
       className="hero-wrapper hero-8 background-image"
       id="hero"
       style={{
-        backgroundImage: `linear-gradient(rgba(10,12,0,0.78), rgba(10,12,0,0.88)), url(${placeholderImg(
-          "hero",
-          1600,
-          900,
-          "recording-studio,microphone,music"
-        )})`,
+        backgroundImage:
+          "linear-gradient(rgba(10,12,0,0.74), rgba(10,12,0,0.86)), url(/assets/img/photos/console.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

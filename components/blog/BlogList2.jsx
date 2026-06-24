@@ -27,12 +27,7 @@ export default function BlogList2() {
                               display: "block",
                               minHeight: "230px",
                               borderRadius: "10px",
-                              backgroundImage: `linear-gradient(rgba(10,12,0,0.3), rgba(10,12,0,0.5)), url(${placeholderImg(
-                                `blogp-${elm.id}`,
-                                700,
-                                500,
-                                elm.theme
-                              )})`,
+                              backgroundImage: `linear-gradient(rgba(10,12,0,0.25), rgba(10,12,0,0.45)), url(${elm.img})`,
                               backgroundSize: "cover",
                               backgroundPosition: "center",
                             }}

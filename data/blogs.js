@@ -11,6 +11,7 @@ export const posts = [
     category: "Grabación",
     date: "15 de junio, 2026",
     theme: "recording-studio,microphone,music",
+    img: "/assets/img/photos/studio1.jpg",
     excerpt:
       "Qué buscar en un estudio de grabación en Downtown Cincinnati, cuánto cuesta y cómo preparar tu sesión para sacarle el máximo.",
     metaDescription:
@@ -59,6 +60,7 @@ export const posts = [
     category: "Video",
     date: "8 de junio, 2026",
     theme: "music-video,filmmaking,concert",
+    img: "/assets/img/photos/video.jpg",
     excerpt:
       "De la idea al estreno: cómo se produce un videoclip en Cincinnati, qué define el precio y cómo lograr un video que destaque en redes.",
     metaDescription:
@@ -106,6 +108,7 @@ export const posts = [
     category: "Fotografía",
     date: "1 de junio, 2026",
     theme: "photoshoot,city,portrait",
+    img: "/assets/img/photos/photo.jpg",
     excerpt:
       "Una guía de los mejores spots de Downtown Cincinnati para fotos de artista: puente Roebling, OTR, el riverfront y más.",
     metaDescription:
@@ -156,6 +159,7 @@ export const posts = [
     category: "Distribución",
     date: "25 de mayo, 2026",
     theme: "music-streaming,spotify,headphones",
+    img: "/assets/img/photos/headphones.jpg",
     excerpt:
       "Qué es la distribución digital, cómo subir tu canción a Spotify y Apple Music y por qué conviene hacerlo bien desde el inicio.",
     metaDescription:
@@ -203,6 +207,7 @@ export const posts = [
     category: "Estudio",
     date: "18 de mayo, 2026",
     theme: "recording-studio,rehearsal,podcast",
+    img: "/assets/img/photos/studio2.jpg",
     excerpt:
       "Ensayos, podcast, sesiones de fotos o creación de contenido: cómo aprovechar la renta de un estudio por hora en Downtown Cincinnati.",
     metaDescription:
@@ -250,6 +255,7 @@ export const posts = [
     category: "Beats",
     date: "11 de mayo, 2026",
     theme: "music-production,beats,studio",
+    img: "/assets/img/photos/mic.jpg",
     excerpt:
       "Qué es un beat con licencia, cómo elegir el que va con tu estilo y por qué importa tener la licencia en orden antes de publicar.",
     metaDescription:
